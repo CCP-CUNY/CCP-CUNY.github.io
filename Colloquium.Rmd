@@ -1,0 +1,48 @@
+---
+title: "Colloquium"
+output: html_document
+---
+
+
+```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=TRUE, results='asis'}
+library(googlesheets)
+library(dplyr)
+#gs_ls()
+web_df <- gs_title("CCP-CUNY")
+ss_df <- gs_read(ss=web_df, ws = 'Colloquium', skip=0)
+
+# sort bib_df by year
+ss_df<-ss_df[order(ss_df$Date, decreasing=T),]
+
+dims<-dim(ss_df)
+
+for(i in 1:dims[1]){
+  
+  cat(c("####",ss_df[i,]$Title)) #title
+  cat(c("\n"))
+  cat(c(ss_df[i,]$First, ss_df[i,]$Last), sep=" ")
+  cat(c(", ", ss_df[i,]$Rank, sep=""))
+  cat(c(", ", ss_df[i,]$Department, sep=""))
+  cat(c("\n\n"))
+  
+  cat(c("**Day**: ", ss_df[i,]$Date), sep=" ")
+  cat(c("\n\n"))
+  cat(c("**Time**: ", ss_df[i,]$Time), sep=" ")
+  cat(c("\n\n"))
+  cat(c("**Room @ GC**: ", ss_df[i,]$Room), sep=" ")
+  cat(c("\n"))
+  cat(c("\n"))
+  cat(ss_df[i,]$Abstract)
+  cat(c("\n"))
+  cat(c("\n"))
+  cat("------")
+  cat(c("\n"))
+  cat(c("\n"))
+  
+  
+}
+
+
+
+```
+

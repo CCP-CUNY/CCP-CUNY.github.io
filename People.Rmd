@@ -1,0 +1,16 @@
+---
+title: "People"
+output: html_document
+---
+
+## Faculty
+
+```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=TRUE}
+library(googlesheets)
+#gs_ls()
+web_df <- gs_title("CCP-CUNY")
+ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
+knitr::kable(ss_df[,1:3])
+
+```
+

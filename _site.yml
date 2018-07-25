@@ -1,0 +1,20 @@
+name: "CCP-CUNY"
+cover-image: "/images/logo.png"
+navbar:
+  title: "CCP-CUNY"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "People"
+      href: People.html
+    - text: "Program Info"
+      href: ProgramInfo.html
+    - text: "Courses"
+      href: Courses.html
+    - text: "Colloquium"
+      href: Colloquium.html
+    - text: "Current Students"
+      href: CurrentStudents.html
+    - text: "Apply"
+      href: Apply.html
+output_dir: "."
