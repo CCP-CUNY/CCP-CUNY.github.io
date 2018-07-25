@@ -27,7 +27,7 @@ Students and faculty in the CCP training area conduct research to understand the
 </div>
 <div class="col-sm-6">
 
-![](images/cognitive_science.png)
+
 
 </div>
 </div>

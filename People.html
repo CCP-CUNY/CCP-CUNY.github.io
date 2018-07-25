@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -161,6 +164,101 @@ $(document).ready(function () {
 <!-- code folding -->
 
 
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -499,9 +597,92 @@ $(document).ready(function () {
 </tbody>
 </table>
 </div>
+<div id="students" class="section level2">
+<h2>Students</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">First</th>
+<th align="left">Last</th>
+<th align="left">EntryYear</th>
+<th align="left">Advisor</th>
+<th align="left">Website</th>
+<th align="left">ResearchInterests</th>
+<th align="left">Area</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Nicholaus</td>
+<td align="left">Brosowsky</td>
+<td align="left">Fall 2014</td>
+<td align="left">Crump</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+<tr class="even">
+<td align="left">Parshina</td>
+<td align="left">Olga</td>
+<td align="left">Fall 2015</td>
+<td align="left">Sekerina</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+<tr class="odd">
+<td align="left">Ergun</td>
+<td align="left">Taylan</td>
+<td align="left">Fall 2016</td>
+<td align="left">Abramov</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+<tr class="even">
+<td align="left">Ezrina</td>
+<td align="left">Emilia</td>
+<td align="left">Fall 2016</td>
+<td align="left">Valian</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+<tr class="odd">
+<td align="left">Papazian</td>
+<td align="left">Katherine</td>
+<td align="left">Fall 2017</td>
+<td align="left">Drake</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+<tr class="even">
+<td align="left">Amada</td>
+<td align="left">Nicole</td>
+<td align="left">Fall 2017</td>
+<td align="left">Shane</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+<tr class="odd">
+<td align="left">Xu</td>
+<td align="left">Qihui</td>
+<td align="left">Fall 2017</td>
+<td align="left">Valian/Chodorow</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">CLD</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
