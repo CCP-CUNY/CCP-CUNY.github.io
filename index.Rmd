@@ -17,7 +17,7 @@ output: html_document
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-# **Cognitive and Comparative Psychology ( CCP @ CUNY )**
+# **Cognitive and Comparative Psychology CCP @ CUNY **
 
 ### Mission Statement
 
@@ -26,6 +26,22 @@ Students and faculty in the CCP training area conduct research to understand the
 
 </div>
 <div class="col-sm-6">
+
+```{r, echo=F}
+knitr::include_graphics("images/CCP_logo.png")
+```
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r, echo=F}
+knitr::include_graphics("images/CunyLogos/Consortial_cuny.png")
+```
 
 
 
