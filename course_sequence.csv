@@ -1,7 +1,21 @@
-YEAR,1,2,3,4
-Year 1: Fall ,Cognitive Psychology CORE ,"Statistics I PR",Research ,Integrative Focus Elective 
-Year 1: Spring ,"Animal Behavior 1 CORE","Statistics II PR",Research ,Research Focus Elective 
-Year 2: Fall ,Core 3 or Elective ,"Ethics PR",Research ,Integrative Focus Elective 
-Year 2: Spring ,Elective/Research ,"Teaching of Psychology PR ",Research ,Research Focus Elective 
-Year 3: Fall ,Elective/Research ,Elective/Research ,Research ,Depth Focus Elective 
-Year 3: Spring ,Elective/Research ,Elective/Research ,Research ,Depth Focus Elective 
+Year,Semester,Course,Credits,Year End Totals
+Y1,Fall,Cognitive Psychology,3,
+,,Stats I,3,
+,,Independent Research,3,
+,,Colloquium,2,
+,Spring,Animal Behavior I,3,
+,,Stats II,3,
+,,Independent Research,3,
+,,Colloquium,2,Year 1: 22
+Y2,Fall,CCP Elective,3,
+,,Ethics Requirement,3,
+,,Advanced Independent Research,5,
+,,Colloquium,2,
+,Spring,CCP Elective,3,
+,,Teaching of Psychology,3,
+,,Advanced Independent Research,5,
+,,Colloquium,2,Year 2: 48
+Y3,Fall,Advanced Independent Research,5,
+,,CCP Elective,3,
+,Spring,Advanced Independent Research,5,
+,,CCP Elective,3,Year 3: 64

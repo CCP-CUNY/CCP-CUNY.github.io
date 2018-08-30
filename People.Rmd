@@ -16,6 +16,10 @@ library(googlesheets)
 #gs_ls()
 web_df <- gs_title("CCP-CUNY")
 ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
+
+library(dplyr)
+ss_df<-arrange(ss_df, Last)
+
 knitr::kable(ss_df[,1:3])
 
 ```
@@ -31,6 +35,8 @@ web_df <- gs_title("CCP-CUNY")
 ss_df <- gs_read(ss=web_df, ws = 'StudentInfo', skip=0)
 
 ss_df <- ss_df %>% `[<-`("Email",value=NULL)
+
+ss_df<-arrange(ss_df, Last)
 
 knitr::kable(ss_df)
 

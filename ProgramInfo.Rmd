@@ -36,51 +36,64 @@ PR = General Program Requirement
 
 ## Path to degree
 
+**bolded* lines represent program milestones
+
 Academic Year One
 
-- Take required core Cognition course (73800)
-- Take required core Animal Behavior course (71600)
+- Take required core Cognitive Psychology course (73800)
+- Take required core Animal Behavior I course (71600)
 - Take required Statistics I (70500) and II (70600)
-- Form advising committee consisting of a chair plus two other faculty
+     a. These statistics courses satisfy a GC requirement, and it is possible to take different statistics courses to satisfy the same requirement (discuss with your comittee)
+  
+- Form advising committee consisting of a chair (your advisor) plus two other faculty. Meet at the end of the first semester, and end of first year.
 - Take two semesters of Independent Research (80200); this forms the basis of the
 1st doctoral examination
-- Take a Research focus and Integrative focus elective
-- Submit abstract for poster presentation at annual GC Psychology Research Day
-- Advisable: Apply for NSF pre-doctoral fellowship
-Cognitive & Comparative Psychology 3
+- Take the CCP colloquium series course
+- Advisable: 
+      a. Apply for NSF pre-doctoral fellowship
+      b. Submit abstract for poster presentation at annual GC Psychology Research Day
+      c. Have the majority of work for first doctoral exam finished so you can complete the exam in a timely fashion.
 
 Academic Year Two
 
-- Pass the 1st doctoral examination before the completion of 45 credits, typically before the second semester of the second year (paper and oral defense)
-- Prepare and submit paper for publication based on research
+- **Pass the 1st doctoral examination before the completion of 45 credits, typically before the second semester of the second year (paper and oral defense)**
 - Take Ethics (77100) and Teaching of Psychology (79900)
-- Take two semesters of Independent Research (80200)
-- Take a Research focus and Integrative focus elective
-- Take two electives in consultation with advisors
-- Apply for doctoral student research grant
-- Submit abstract for poster presentation at a non-CUNY conference
+      a. These are GC requirements, and there may be other course options to satisfy these requirements (discuss with committee)
+- Take two semesters of Advanced Independent Research
+- Take CCP Colloquium series
+- Take two CCP electives (consult with committee about other possible options)
 - Establish topic for 2nd doctoral exam; create committee; create reading list
+- Advisable: 
+      a. Prepare and submit paper (likely based on first year project) for publication.
+      b. Apply for doctoral student research grant
+      c. Submit abstract for poster presentation at a non-CUNY conference
 
 Academic Year Three
 
 - Move to Level II tuition status (completion of 45 credits and 1st doctoral examination)
 - Develop independent research project in consultation with 2nd doc committee (which can
 differ from the 1st doc committee)
-- Complete remaining course requirements in consultation with advisor
-- Submit abstract for poster presentation at a non-CUNY conference
-- Complete second doctoral exam (literature review, grant proposal, oral defense)
+- Take Advanced Independent Research each semester
+- Take one CCP elective each semester
+- **Complete second doctoral exam (literature review, grant proposal, oral defense)**
+- Advisable: 
+      a. Submit abstract for poster presentation at a non-CUNY conference
+      b. Complete another research project and submit a paper for publication in a peer-reviewed journal
+
 
 Academic Year Four
 
+- **Move to Level III status (completion of 1st and 2nd doctoral examinations, coursework, and
+dissertation topic proposal), and register for Dissertation Supervision (9000)**
 - Establish CUNY-internal dissertation committee (which can differ from the 1st and 2nd exam committees)
-- Submit dissertation topic proposal within 6 months of completing 2nddoctoral exam
-- Begin research project stemming from dissertation proposal
-- Submit abstract for talk at a non-CUNY conference
-- Submit an additional manuscript for publication in a peer-reviewed journal
-- Assemble letters, CVs, website, and other material for job search
-- Apply for dissertation-year fellowship
-- Move to Level III status (completion of 1st and 2nd doctoral examinations, coursework, and
-dissertation topic proposal)
+- **Submit dissertation proposal within 6 months of completing 2nd doctoral exam**
+- Continue research project stemming from dissertation proposal
+- Advisable: 
+     a. Submit abstract for talk at a non-CUNY conference
+     b. Submit an additional manuscript for publication in a peer-reviewed journal
+     c. Assemble letters, CVs, website, and other material for job search
+     d. Apply for dissertation-year fellowship
+
 
 Academic Year Five
 
@@ -89,8 +102,8 @@ Academic Year Five
 - Submit abstract for talk at a non-CUNY conference
 - Begin search for faculty, post-doctoral, industry, non-profit, or other positions
 - Complete doctoral dissertation committee (including external readers)
-- Complete, submit, and defend dissertation
-- Deposit dissertation and attend commencement before September
+- **Complete, submit, and defend dissertation**
+- **Deposit dissertation and attend commencement before September**
 
 ----
 
@@ -100,24 +113,22 @@ A student in Cognitive and Comparative Psychology (CCP) who has successfully ach
 to, and communicating scientific knowledge. In particular, a student will:
 
 1. Demonstrate broad and specialized knowledge in the student's chosen area within Cognitive and Comparative Psychology, including the ability to:
-
-    a. Read and critically evaluate the research literature
-    b. Describe current and classic theories and findings within a specific sub-field, and
+     a. Read and critically evaluate the research literature
+     b. Describe current and classic theories and findings within a specific sub-field, and
 explain how theories accommodate available findings
-    c. Design a study to address a major unresolved research problem
+     c. Design a study to address a major unresolved research problem
     
 2. Demonstrate appropriate quantitative, observational, and computational skills for data generation (conducting studies) and data analysis.
 
 3. Make an original contribution to the field.
 
 4. Demonstrate abilities to explain theory and data in written and oral forms, including:
-
-    a. Writing a journal-quality manuscript and submitting it for publication to a peer-
+     a. Writing a journal-quality manuscript and submitting it for publication to a peer-
 reviewed journal
-    b. Delivering a conference presentation
-    c. Giving an undergraduate lecture
-    d. Writing a grant application for external funding
-    e. Completing a doctoral dissertation
+     b. Delivering a conference presentation
+     c. Giving an undergraduate lecture
+     d. Writing a grant application for external funding
+     e. Completing a doctoral dissertation
     
 5. Interact effectively and collegially with others in the field and conform to the fundamentals of ethical research conduct.
 
@@ -130,7 +141,18 @@ Each of the five principal learning goals are assessed across three major examin
 
 ### First Examination
 
-The First Exam is a written exam taken by the end of the student’s third semester (and no later than the accrual of 45 credits). The student writes a publication-quality empirical paper, preferably in APA style. Since some projects require more preparation than others, students may submit an examination that involves analysis of existing data sets. In that event, the student must separately write up a methods section detailing the methods they have been learning, discuss how their data analysis dovetails with their planned research, and present the implications of the findings. Every portion of the writing of the exam must be original, even if existing data sets are used. Students may also write up experiments with null results. A rubric is provided for the First Exam to guide the student and the advisory committee that will grade the exam and determine whether the student has passed or failed.
+The First Exam is a **written exam and oral presentation** taken by the end of the student’s third semester (and no later than the accrual of 45 credits). The student writes a publication-quality paper, preferably in APA style, and delivers a short (e.g., 20 minutes) presentation of the work to the committee.
+
+There are two options for the paper, empirical paper OR review paper. Students discuss their choice of paper with their first doctoral committee. The scope of the project should be tailored so that it can be completed in the first year.
+
+1. **Empirical paper option**: Conduct at least one experiment that addresses a question in the field. Complete an analysis of the results. Write a publication quality APA-style research paper.
+     a. Peer-reviewed publication is NOT a requirement for completing the first-doc. For example, students could write-up null results in the event that the outcome of the research project was not as expected
+     b. There is some flexibility in determining the nature of the research project, this should be done in consultation with the first doctoral examination committee, who will approve the project. For example, it may be permissible to analyze an existing data set as a means to test a novel theory.
+     
+2. **Review paper option**: Students have a choice of one of 5 topics proposed for the First Exam which is a publishable quality literature review aimed at critically assessing published research in comparative psychology and animal behavior. The topics are proposed by the students committee.
+
+
+Every portion of the writing of the exam must be original, even if existing data sets are used. The advisory committee that will grade the exam and determine whether the student has passed or failed. **The first doctoral exam should be completed soon after the end of the first year (e.g., in the first semester of the 2nd year), and no later than the end of the 2nd year.**
 
 Learning goals assessed (1,3,4,5)
 
@@ -144,7 +166,13 @@ Learning goals assessed (1,3,4,5)
 
 ### Second Examination
 
-The Second Exam is written between the student’s fifth and sixth semester. The Second Exam is in three parts. 1) The student writes an integrative literature review (which in the ideal case will serve as basis for the introduction to the student’s thesis). The review is approximately 30-50 double-spaced pages using 12-point type and 1-inch margins. 2) The student writes an NIH NRSA grant proposal that is 6 single-spaced pages in length and follows NIH guidelines; the student proposes at least two feasible new experiments. A 6-page proposal to another funding institution may be substituted for an NRSA proposal with the agreement of the student's advisor and committee. 3) The student orally presents and defends the material written for the Second Exam.
+The Second Exam is written in the student’s fifth and sixth semester (third year). The Second Exam involves a **written exam and oral presentation**. There are two options for completing the 2nd doctoral exam, and the option taken by the student is discussed in consultation with the committee for the 2nd doctoral exam. The options are NRSA style grant OR literature review.
+
+1. **NRSA style grant**: The student writes an NIH NRSA grant proposal that is 6 single-spaced pages in length and follows NIH guidelines; the student proposes at least two feasible new experiments. A 6-page proposal to another funding institution may be substituted for an NRSA proposal with the agreement of the student's advisor and committee.
+
+2. **Literature Review**: The student writes an integrative literature review (which in the ideal case will serve as basis for the introduction to the student’s thesis). The review is approximately 30-50 double-spaced pages using 12-point type and 1-inch margins. 
+
+The student orally presents and defends the material written for the Second Exam. **The 2nd doctoral exam should be completed at the end of the 3rd year, and the student should move to level III at the beginning of their 4th year (e.g., complete 60 credits, and register for Dissertation Supervision)**
 
 Learning goals assessed (1,3,4,5)
 
@@ -177,7 +205,7 @@ Learning goals assessed (1, 2, 3, 4, and 5)
 
 In order to have successfully completed the dissertation the student will have:
 
-1. Designed an experimental or theoretical approach to a significant, unresolved research problem in cognition or communication in humans or animals (1.a, b, c, & 3).
+1. Designed an experimental or theoretical approach to an unresolved research problem in any area within cognitive or comparative psychology in humans or animals.” (1.a, b, c, & 3).
 
 2. Identified and initiated a research design appropriate to that approach, including critical controls (1.c & 2).
 
@@ -188,3 +216,17 @@ In order to have successfully completed the dissertation the student will have:
 5. Published one or more first-author papers in peer-reviewed journals (4.a).
 
 6. Effectively defended the thesis and displayed an understanding of the current state of research in areas cognate to the thesis topic (1.a, b, 4.e, & 5).
+
+## Additional Information
+
+### Lab Rotations
+
+Lab rotations are not formally required, however they are possible and encouraged in consultation with a student's advisory committee. For example, a student may wish to gain expertise by learning a method, or exploring another research domain, in another laboratory. This can easily be accomplished by making arrangements to complete one of the indepedent research, or advanced independent research courses with a different faculty member in CCP. 
+
+### Taking Non-CCP Electives
+
+Students are strongly encouraged to register for CCP electives, as these courses will likely be most germane to their topics of study. Occasionally, a student may decide in consultation with their committee that a different elective should be taken in place of one of the CCP electives. This decision is made by the student's committee with approval from the CCP training area head.
+
+### Forming an advisory committee
+
+Students should form an advisory committee as soon as possible in their first year, typically within the first month. The advisory committee will consist of the primary advisor, along with at least 2 other CCP members. Additional GC faculty can also be invited to join the committee. The committee should meet with the student at the end of the first semester and first year to discuss student progress. After the first year, the committee should meet at least once per year to discuss student progress. Typically, the yearly meetings could also occur at the same time the committee meets for an examination (e.g., first doc, second doc, etc.). The composition of the committee may change flexibly across the years as the student's research program comes into focus.
