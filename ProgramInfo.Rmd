@@ -12,10 +12,11 @@ output:
 
 ## Program of Study
 
-All students enroll in PSYC 70500 Statistics I (3 cr) and PSYC 70600 Statistics II (3 cr); PSYC 79900 Ethics (3 cr); and PSYC 77100 Teaching of Psychology (3 cr) for a total of 12 credits.
-There are two required core courses: PSYC 73800 Cognitive Psychology, and PSYC 71600 Animal Behavior 1. Beyond the core requirements, students take elective and independent research courses (typically 3 cr each) until they reach 60 credits. Elective courses are chosen through consultation between the student and the student's advisory committee. Course selection must be approved by the student's advisory committee.
+All students enroll in PSYC 70500 Statistics I (3 cr) and PSYC 70600 Statistics II (3 cr); PSYC 79900 Ethics (3 cr, or its equivalent); PSYC 77100 Teaching of Psychology (3 cr); and PSYC 80102 CCP Colloquium (2 cr each semester for Years 1 and 2) for a total of 20 credits. There are two required core courses: PSYC 73800 Cognitive Psychology, and PSYC 71600 Animal Behavior 1. Beyond the core requirements, students take elective and independent research courses (3 or 5 cr each) until they reach 60 credits. Elective courses are chosen through consultation between the student and the student’s advisory committee. Course selection must be approved by the student’s advisory committee.
 
-CCP is a mentor-based and research-focused training area, so students are expected to enroll in PSYC 80200 Independent Research each semester (unless they have completed their 60 credits). Students are strongly encouraged to take at least one independent research course with a faculty member who is not their primary advisor. Additional electives must include at least three content courses (i.e., not methods, research, or professional development courses). CCP offers electives with four major areas of focus described in the table below. Many electives are routinely offered as special topics seminars that connect foundational work with leading edge research topics.
+
+CCP is a mentor-based and research-focused training area, so students are expected to enroll in Independent Research (PSYC 80200 for first-year students and PSYC 80206 otherwise) each semester (unless they have completed their 60 credits). Students are strongly encouraged to take at least one independent research course with a faculty member who is not their primary advisor. Additional electives must include at least 2-3 content courses (i.e., not methods, research, or professional development courses). CCP offers electives with four major areas of focus described in the table below. Many electives are routinely offered as special topics seminars that connect foundational work with leading edge research topics.
+
 
 ----
 
@@ -84,7 +85,7 @@ differ from the 1st doc committee)
 Academic Year Four
 
 - **Move to Level III status (completion of 1st and 2nd doctoral examinations, coursework, and
-dissertation topic proposal), and register for Dissertation Supervision (9000)**
+dissertation topic proposal), and register for Dissertation Supervision (90000)**
 - Establish CUNY-internal dissertation committee (which can differ from the 1st and 2nd exam committees)
 - **Submit dissertation proposal within 6 months of completing 2nd doctoral exam**
 - Continue research project stemming from dissertation proposal
@@ -139,20 +140,20 @@ reviewed journal
 
 Each of the five principal learning goals are assessed across three major examinations taking place throughout a student's doctoral career. The following sections describe how each examination measures each of the learning goals. Each examination is assessed by a committee of faculty members assembled by the student.
 
-### First Examination
+### First Doctoral Exam
 
-The First Exam is a **written exam and oral presentation** taken by the end of the student’s third semester (and no later than the accrual of 45 credits). The student writes a publication-quality paper, preferably in APA style, and delivers a short (e.g., 20 minutes) presentation of the work to the committee.
+The First doctoral exam is a **written exam and oral presentation** taken by the end of the student’s third semester (and no later than the accrual of 45 credits). The student writes a publication-quality paper, preferably in APA style, and delivers a short (e.g., 20 minutes) presentation of the work to the committee.
 
 There are two options for the paper, empirical paper OR review paper. Students discuss their choice of paper with their first doctoral committee. The scope of the project should be tailored so that it can be completed in the first year.
 
-1. **Empirical paper option**: Conduct at least one experiment that addresses a question in the field. Complete an analysis of the results. Write a publication quality APA-style research paper.
+1. **Empirical paper option**: Conduct at short series of experiments that addresses a question in the field. Complete an analysis of the results. Write a publication quality APA-style research paper.
      a. Peer-reviewed publication is NOT a requirement for completing the first-doc. For example, students could write-up null results in the event that the outcome of the research project was not as expected
      b. There is some flexibility in determining the nature of the research project, this should be done in consultation with the first doctoral examination committee, who will approve the project. For example, it may be permissible to analyze an existing data set as a means to test a novel theory.
      
-2. **Review paper option**: Students have a choice of one of 5 topics proposed for the First Exam which is a publishable quality literature review aimed at critically assessing published research in comparative psychology and animal behavior. The topics are proposed by the students committee.
+2. **Review paper option**: Students have a choice of writing a publishable quality literature review aimed at critically assessing published research in any subfield of cognitive and comparative psychology. The topic of choice should be approved by the student’s advisory committee.
 
 
-Every portion of the writing of the exam must be original, even if existing data sets are used. The advisory committee that will grade the exam and determine whether the student has passed or failed. **The first doctoral exam should be completed soon after the end of the first year (e.g., in the first semester of the 2nd year), and no later than the end of the 2nd year.**
+Every portion of the writing of the exam must be original, even if existing data sets are used. The advisory committee that will grade the exam and determine whether the student has passed or failed. **The first doctoral exam should be completed soon after the end of the first year and no later than the end of the first semester of the 2nd year.** If a student fails their written or oral 1st doc exam, they will be given one more opportunity to pass by the end of the 2nd year.  
 
 Learning goals assessed (1,3,4,5)
 

@@ -3,6 +3,7 @@ title: "Courses"
 output: html_document
 ---
 
+A sample of recent courses offered:
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=TRUE}
 library(googlesheets)

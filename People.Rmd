@@ -19,10 +19,12 @@ ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
 
 library(dplyr)
 ss_df<-arrange(ss_df, Last)
-
-knitr::kable(ss_df[,1:3])
+ss_df$Image[is.na(ss_df$Image)==TRUE]<-" "
+knitr::kable(ss_df[,c(1:3,13)])
 
 ```
+
+
 
 
 ## Students
