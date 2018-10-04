@@ -13,8 +13,6 @@ navbar:
       href: Courses.html
     - text: "Colloquium"
       href: Colloquium.html
-    - text: "Current Students"
-      href: CurrentStudents.html
     - text: "Apply"
       href: Apply.html
 output_dir: "."

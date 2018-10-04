@@ -15,7 +15,7 @@ output:
 All students enroll in PSYC 70500 Statistics I (3 cr) and PSYC 70600 Statistics II (3 cr); PSYC 79900 Ethics (3 cr, or its equivalent); PSYC 77100 Teaching of Psychology (3 cr); and PSYC 80102 CCP Colloquium (2 cr each semester for Years 1 and 2) for a total of 20 credits. There are two required core courses: PSYC 73800 Cognitive Psychology, and PSYC 71600 Animal Behavior 1. Beyond the core requirements, students take elective and independent research courses (3 or 5 cr each) until they reach 60 credits. Elective courses are chosen through consultation between the student and the student’s advisory committee. Course selection must be approved by the student’s advisory committee.
 
 
-CCP is a mentor-based and research-focused training area, so students are expected to enroll in Independent Research (PSYC 80200 for first-year students and PSYC 80206 otherwise) each semester (unless they have completed their 60 credits). Students are strongly encouraged to take at least one independent research course with a faculty member who is not their primary advisor. Additional electives must include at least 2-3 content courses (i.e., not methods, research, or professional development courses). CCP offers electives with four major areas of focus described in the table below. Many electives are routinely offered as special topics seminars that connect foundational work with leading edge research topics.
+CCP is a mentor-based and research-focused training area, so students are expected to enroll in Independent Research (PSYC 80200 for first-year students and PSYC 80206 otherwise) each semester (unless they have completed their 60 credits). Students are strongly encouraged to take at least one independent research course with a faculty member who is not their primary advisor, as well as 4 elective courses (2-3 of which should be offered through the CCP training area).
 
 
 ----
@@ -146,7 +146,7 @@ The First doctoral exam is a **written exam and oral presentation** taken by the
 
 There are two options for the paper, empirical paper OR review paper. Students discuss their choice of paper with their first doctoral committee. The scope of the project should be tailored so that it can be completed in the first year.
 
-1. **Empirical paper option**: Conduct at short series of experiments that addresses a question in the field. Complete an analysis of the results. Write a publication quality APA-style research paper.
+1. **Empirical paper option**: Conduct an empirical project that is approved by the student’s advisory committee and address a question in the field. The extent of the project should be appropriate to the laboratory in which the research is being conducted. Complete an analysis of the results. Write a publication quality APA-style research paper.
      a. Peer-reviewed publication is NOT a requirement for completing the first-doc. For example, students could write-up null results in the event that the outcome of the research project was not as expected
      b. There is some flexibility in determining the nature of the research project, this should be done in consultation with the first doctoral examination committee, who will approve the project. For example, it may be permissible to analyze an existing data set as a means to test a novel theory.
      
@@ -192,15 +192,13 @@ work. Students are expected to continue to work closely with their supervisor an
 
 #### Dissertation
 
-The dissertation, or thesis, is expected to be completed no later than the end of the student's fifth year in the Psychology Program. The thesis may take one of two forms: a) 2-3 individual publishable papers on a theme (the number to be determined by the complexity and number of experiments in each paper); b) a conventional thesis.
+The dissertation, or thesis, is expected to be completed no later than the end of the student's fifth year in the Psychology Program. The thesis asks a coherent set of questions, reflecting the student's body of work over the course of their doctoral studies. The expectation is that work described in the thesis would form the basis for 3 individual publishable papers in a peer-reviewed journal. 
 
-Under the 2-3-paper model, the thesis reflects the student’s body of work over the course of their doctoral studies. Although 3 is the typical number of expected papers, 2 may be sufficient in the cases of multi-study papers, longitudinal studies, studies with very complex designs, and so on. Students are expected to write a general introduction and discussion that links the papers.
-
-Under the conventional model, the thesis asks a coherent set of questions and follows a traditional format consisting of a series of studies investigating those questions and the overall conclusions.
+The thesis is formatted according to the [GC template](http://libguides.gc.cuny.edu/dissertations/format). In general, it includes an introduction motivating the work, a series of empirical chapters, and a general discussion. If the student has already published three peer-reviewed manuscripts that will form the bulk of the thesis, these manuscripts may be inserted as the empirical chapters (formatted according to the [GC template](http://libguides.gc.cuny.edu/dissertations/format)).
 
 #### Dissertation Defense
 
-Dissertation defenses are arranged once the dissertation committee has determined that the student is ready to defend their thesis. Defenses are open to the public. In additional to the 3- member committee, the student may have an internal reader and an external reader. Readers are arranged in consultation with the dissertation supervisor. The defense typically takes the form of a 30-minute presentation by the student, followed by questions from anyone attending the defense. The committee may ask some questions in public and others with only the student in the room.
+Dissertation defenses are arranged once the dissertation committee has determined that the student is ready to defend their thesis. Defenses are open to the public. In additional to the 3-member committee, the student may have an internal reader and an external reader. Readers are arranged in consultation with the dissertation supervisor. The defense typically takes the form of a 30-minute presentation by the student, followed by questions from anyone attending the defense. The committee may ask some questions in public and others with only the student in the room.
 
 Learning goals assessed (1, 2, 3, 4, and 5)
 
