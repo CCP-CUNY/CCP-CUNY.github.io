@@ -31,6 +31,14 @@ cat(c("<div class=\"col-sm-9\">"))
 cat(c("\n"))
 cat(c("#### ", ss_df$First[i], ss_df$Last[i]))
 cat(c("\n"))
+
+if(is.na(ss_df$TakingStudents[i])==FALSE){
+  cat(c("[Accepting Ph.D. Applications for Fall 2019](https://ccp-cuny.github.io/Apply.html)"))
+  cat(c("\n"))
+  cat(c("\n"))
+}
+
+
 if(is.na(ss_df$LabWebsite[i])==FALSE){
 cat(c("[Lab Website](", ss_df$LabWebsite[i],") | [Campus Website](", ss_df$CollegeWebsite[i],")","| contact:",ss_df$Email[i]))
 }else{
@@ -61,7 +69,6 @@ cat(c("\n"))
 cat(c("</div>"))
 cat(c("<div class=\"col-sm-3\">"))
 cat(c("<img src=\"images/facultypng/",ss_df$Last[i],".png\" alt=\"peopleimg\">"),sep="")
-cat(c("\n"))
 cat(c("</div>"))
 cat(c("</div>"))
 }
