@@ -25,7 +25,7 @@ for(i in 1:dims[1]){
   cat(c(", ", ss_df[i,]$Department, sep=""))
   cat(c("\n\n"))
   
-  cat(c("**Day**: ", ss_df[i,]$Date), sep=" ")
+  cat(c("**Day**: ", as.character(ss_df[i,]$Date)), sep=" ")
   cat(c("\n\n"))
   cat(c("**Time**: ", ss_df[i,]$Time), sep=" ")
   cat(c("\n\n"))
