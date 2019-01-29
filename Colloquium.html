@@ -96,6 +96,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -110,7 +113,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -130,6 +132,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -151,18 +190,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -215,9 +313,126 @@ $(document).ready(function () {
 </div>
 
 
+<div id="psychedelic-induced-changes-in-the-self-an-exploratory-qualitative-study" class="section level4">
+<h4>Psychedelic-Induced Changes in the Self: An exploratory qualitative study</h4>
+<p>Nicole Amada, Graduate Student , Brooklyn College</p>
+<p><strong>Day</strong>: 2019-05-10</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="top-down-and-bottom-up-processes-in-proofreading" class="section level4">
+<h4>Top-Down and Bottom-Up Processes in Proofreading</h4>
+<p>Martin Chodorow, Professor , Hunter College</p>
+<p><strong>Day</strong>: 2019-05-03</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="large-scale-mapping-of-dopamine-neuron-release-sites-using-a-novel-application-of-proximity-ligation-assay" class="section level4">
+<h4>Large-scale mapping of dopamine neuron release sites using a novel application of proximity ligation assay</h4>
+<p>Leora Yetnikoff, Assistant Professor , College of Staten Island</p>
+<p><strong>Day</strong>: 2019-04-12</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="typing-and-cognition-detecting-hidden-attitudes-using-keystroke-dynamics" class="section level4">
+<h4>Typing and Cognition: Detecting hidden attitudes using keystroke dynamics</h4>
+<p>Matthew Crump, Associate Professor , Brooklyn College</p>
+<p><strong>Day</strong>: 2019-04-06</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="emotion-processing-deficits-and-individual-differences-does-cueing-to-relevant-facial-features-increase-cognitive-and-emotional-empathy" class="section level4">
+<h4>Emotion processing deficits and individual differences: Does cueing to relevant facial features increase cognitive and emotional empathy?</h4>
+<p>Shawn Fagan, Graduate Student , Brooklyn College</p>
+<p><strong>Day</strong>: 2019-03-29</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="differential-fear-memory-retrieval-in-juvenile-and-adult-rats" class="section level4">
+<h4>Differential fear memory retrieval in juvenile and adult rats</h4>
+<p>Peter Serrano, Associate Professor , Hunter College</p>
+<p><strong>Day</strong>: 2019-03-22</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="crowd-wisdom-enhanced-by-costly-signaling-in-a-virtual-rating-system" class="section level4">
+<h4>Crowd-wisdom enhanced by costly signaling in a virtual rating system</h4>
+<p>Ofer Tchernichovski, Professor , Hunter College</p>
+<p><strong>Day</strong>: 2019-03-15</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="learning-to-predict-what-and-when-an-event-happens" class="section level4">
+<h4>Learning to Predict ‘What’ and ‘When’ an Event Happens</h4>
+<p>Andrew Delamater, Professor , Brooklyn College</p>
+<p><strong>Day</strong>: 2019-03-08</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="learning-from-your-own-vs.-others-metacognitive-errors-in-a-social-information-sharing-setting-evidence-for-hypercorrection" class="section level4">
+<h4>Learning from your own vs. others’ metacognitive errors in a social information-sharing setting: Evidence for hypercorrection?</h4>
+<p>Casey Williamson, Graduate Student , CUNY Graduate Center</p>
+<p><strong>Day</strong>: 2019-03-01</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="a-vocabulary-of-electrocommunication-and-jamming-avoidance-in-weakly-electric-fishes" class="section level4">
+<h4>A vocabulary of electrocommunication and jamming avoidance in weakly electric fishes</h4>
+<p>Chris Braun, Professor , Hunter College</p>
+<p><strong>Day</strong>: 2019-02-22</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="multi-tasking-and-cognitive-load-effects-in-visual-working-memory" class="section level4">
+<h4>Multi-Tasking and Cognitive Load Effects in Visual Working Memory</h4>
+<p>Timothy Ricker, Assistant Professor , College of Staten Island</p>
+<p><strong>Day</strong>: 2019-02-15</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="the-behavioral-and-neural-effects-of-rehearsal-on-working-and-long-term-memory-for-novel-naturalistic-stimuli" class="section level4">
+<h4>The Behavioral and Neural Effects of Rehearsal on Working and Long-Term Memory for Novel Naturalistic Stimuli</h4>
+<p>Chelsea Reichert-Plaska, Graduate Student , City College of New York</p>
+<p><strong>Day</strong>: 2019-02-08</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
+<div id="reading-and-learning-to-read-in-cyrillic-an-eye-tracking-study" class="section level4">
+<h4>Reading and Learning to read in Cyrillic: An eye-tracking study</h4>
+<p>Olga Parshina, Graduate Student , College of Staten Island</p>
+<p><strong>Day</strong>: 2019-02-01</p>
+<p><strong>Time</strong>: 2:30-4:00pm</p>
+<p><strong>Room @ GC</strong>: 6493</p>
+<p>NA</p>
+<hr />
+</div>
 <div id="evolutionary-selection-shapes-bird-song-learning" class="section level4">
 <h4>Evolutionary selection shapes bird song learning</h4>
-<p>David Lahti, NA , Queens College</p>
+<p>David Lahti, Associate Professor , Queens College</p>
 <p><strong>Day</strong>: 2018-12-07</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -226,7 +441,7 @@ $(document).ready(function () {
 </div>
 <div id="proactive-interference-and-scene-memory-consolidation" class="section level4">
 <h4>Proactive interference and scene memory consolidation</h4>
-<p>Timothy Elmore, NA , City College of New York</p>
+<p>Timothy Ellmore, Associate Professor , City College of New York</p>
 <p><strong>Day</strong>: 2018-11-30</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -235,7 +450,7 @@ $(document).ready(function () {
 </div>
 <div id="action-sequencing-learning-performance-and-goal-directed-control" class="section level4">
 <h4>Action sequencing: learning, performance, and goal-directed control</h4>
-<p>Eric Garr, NA , NA</p>
+<p>Eric Garr, Graduate Student , Brooklyn College</p>
 <p><strong>Day</strong>: 2018-11-16</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -244,7 +459,7 @@ $(document).ready(function () {
 </div>
 <div id="examining-relations-between-executive-functions-and-literacy-in-adolescents" class="section level4">
 <h4>Examining Relations between Executive Functions and Literacy in Adolescents</h4>
-<p>Individual Differences in Statistical Learning as Assessed by SRT and ASRT Tasks Teresa Ober, &amp; Elizabeth Che NA, NA , College of Staten Island</p>
+<p>Individual Differences in Statistical Learning as Assessed by SRT and ASRT Tasks Teresa Ober, &amp; Elizabeth Che NA, Graduate Students , College of Staten Island</p>
 <p><strong>Day</strong>: 2018-11-09</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -253,16 +468,16 @@ $(document).ready(function () {
 </div>
 <div id="improving-performance-through-narrative-identification" class="section level4">
 <h4>Improving Performance through Narrative Identification</h4>
-<p>Shannon Pinegar, NA , NA</p>
+<p>Shannon Pinegar, Post-Doctoral Fellow , Baruch College</p>
 <p><strong>Day</strong>: 2018-11-02</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
 <p>NA</p>
 <hr />
 </div>
-<div id="learning-to-predict-what-and-when-an-event-happens" class="section level4">
+<div id="learning-to-predict-what-and-when-an-event-happens-1" class="section level4">
 <h4>Learning to Predict ‘What’ and ‘When’ an Event Happens</h4>
-<p>Andy Delamater, NA , Brooklyn College</p>
+<p>Andy Delamater, Professor , Brooklyn College</p>
 <p><strong>Day</strong>: 2018-10-19</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -271,7 +486,7 @@ $(document).ready(function () {
 </div>
 <div id="how-similar-are-the-grammars-between-two-year-olds-and-their-parents" class="section level4">
 <h4>How Similar are the Grammars between Two-Year-Olds and Their Parents?</h4>
-<p>Virginia Valian, NA , Hunter College</p>
+<p>Virginia Valian, Distinguished Professor , Hunter College</p>
 <p><strong>Day</strong>: 2018-10-12</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -280,7 +495,7 @@ $(document).ready(function () {
 </div>
 <div id="drawing-and-stem-learning-can-tracing-improve-number-recognition-in-preschoolers" class="section level4">
 <h4>Drawing and STEM Learning: Can tracing improve number recognition in preschoolers?</h4>
-<p>Katie Papazian, NA , NA</p>
+<p>Katie Papazian, Graduate Student , Brooklyn College</p>
 <p><strong>Day</strong>: 2018-10-05</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -289,7 +504,7 @@ $(document).ready(function () {
 </div>
 <div id="why-conservation-needs-comparative-cognition-elephants-pangolins-and-pandas" class="section level4">
 <h4>Why conservation needs comparative cognition: Elephants, pangolins and pandas</h4>
-<p>Josh Plotnik, NA , NA</p>
+<p>Josh Plotnik, Assistant Professor , Hunter College</p>
 <p><strong>Day</strong>: 2018-09-28</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -298,7 +513,7 @@ $(document).ready(function () {
 </div>
 <div id="the-representation-and-processing-of-emotional-concepts-in-chinese-english-bilinguals" class="section level4">
 <h4>The Representation and Processing of Emotional Concepts in Chinese-English Bilinguals</h4>
-<p>Junqing Chen, NA , NA</p>
+<p>Junqing Chen, Graduate Student , Brooklyn College</p>
 <p><strong>Day</strong>: 2018-09-21</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -307,7 +522,7 @@ $(document).ready(function () {
 </div>
 <div id="pattern-and-process-in-cultural-evolution" class="section level4">
 <h4>Pattern and Process in Cultural Evolution</h4>
-<p>Mason Youngblood, NA , Queens College</p>
+<p>Mason Youngblood, Graduate Student , Queens College</p>
 <p><strong>Day</strong>: 2018-09-14</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3207</p>
@@ -316,7 +531,7 @@ $(document).ready(function () {
 </div>
 <div id="language-acquisition-use" class="section level4">
 <h4>Language Acquisition &amp; Use</h4>
-<p>Language Acquisition &amp; Use Language Acquisition &amp; Use Emilia Ezrina, Qihui Xu, &amp; Josephine O’Malley NA, NA , Hunter College</p>
+<p>Language Acquisition &amp; Use Language Acquisition &amp; Use Emilia Ezrina, Qihui Xu, &amp; Josephine O’Malley NA, Graduate Students , Hunter College</p>
 <p><strong>Day</strong>: 2018-09-07</p>
 <p><strong>Time</strong>: 2:30-4:00pm</p>
 <p><strong>Room @ GC</strong>: 3306</p>
@@ -325,7 +540,7 @@ $(document).ready(function () {
 </div>
 <div id="mindsets-motivations-and-memory-a-social-cognitive-neuroscience-approach" class="section level4">
 <h4>Mindsets, Motivations and Memory: A Social Cognitive Neuroscience Approach</h4>
-<p>Jennifer Mangels, Full Professor , Baruch College</p>
+<p>Jennifer Mangels, Professor , Baruch College</p>
 <p><strong>Day</strong>: 2018-04-27</p>
 <p><strong>Time</strong>: 2-3pm</p>
 <p><strong>Room @ GC</strong>: 4419</p>
@@ -334,7 +549,7 @@ $(document).ready(function () {
 </div>
 <div id="online-language-processing-in-bilingual-heritage-speakers-insights-from-the-visual-world-paradigm" class="section level4">
 <h4>Online Language Processing in Bilingual Heritage Speakers: Insights from the Visual World Paradigm</h4>
-<p>Irina Sekerina, Full Professor , College of Staten Island</p>
+<p>Irina Sekerina, Professor , College of Staten Island</p>
 <p><strong>Day</strong>: 2018-03-23</p>
 <p><strong>Time</strong>: 2-3pm</p>
 <p><strong>Room @ GC</strong>: 4419</p>
