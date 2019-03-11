@@ -31,12 +31,13 @@ cat(c("<div class=\"col-sm-9\">"))
 cat(c("\n"))
 cat(c("#### ", ss_df$First[i], ss_df$Last[i]))
 cat(c("\n"))
+cat(c("\n"))
 
-if(is.na(ss_df$TakingStudents[i])==FALSE){
-  cat(c("[Accepting Ph.D. Applications for Fall 2019](https://ccp-cuny.github.io/Apply.html)"))
-  cat(c("\n"))
-  cat(c("\n"))
-}
+#if(is.na(ss_df$TakingStudents[i])==FALSE){
+#  cat(c("[Accepting Ph.D. Applications for Fall #2019](https://ccp-cuny.github.io/Apply.html)"))
+#  cat(c("\n"))
+#  cat(c("\n"))
+#}
 
 
 if(is.na(ss_df$LabWebsite[i])==FALSE){
