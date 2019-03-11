@@ -100,6 +100,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -114,7 +117,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -134,6 +136,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -155,18 +194,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -319,7 +417,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="israel-abramov">Israel Abramov</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=482">Campus Website</a> | contact: <a href="mailto:IAbramov@brooklyn.cuny.edu">IAbramov@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=482">Campus Website</a> | contact: <a href="mailto:IAbramov@brooklyn.cuny.edu" class="email">IAbramov@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -329,7 +427,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="jennifer-basil">Jennifer Basil</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=92">Campus Website</a> | contact: <a href="mailto:jbasil@brooklyn.cuny.edu">jbasil@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=92">Campus Website</a> | contact: <a href="mailto:jbasil@brooklyn.cuny.edu" class="email">jbasil@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -339,7 +437,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="christopher-braun">Christopher Braun</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/fishbrains">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/braun">Campus Website</a> | contact: <a href="mailto:cbraun@hunter.cuny.edu">cbraun@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/fishbrains">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/braun">Campus Website</a> | contact: <a href="mailto:cbraun@hunter.cuny.edu" class="email">cbraun@hunter.cuny.edu</a></p>
 <p>Full Professor | Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -349,7 +447,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="elisabeth-brauner">Elisabeth Brauner</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=431">Campus Website</a> | contact: <a href="mailto:EBrauner@brooklyn.cuny.edu">EBrauner@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=431">Campus Website</a> | contact: <a href="mailto:EBrauner@brooklyn.cuny.edu" class="email">EBrauner@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -360,7 +458,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="patricia-brooks">Patricia Brooks</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="https://www.researchgate.net/profile/Patricia_Brooks3">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/patricia-j-brooks">Campus Website</a> | contact: <a href="mailto:patricia.brooks@csi.cuny.edu">patricia.brooks@csi.cuny.edu</a></p>
+<p><a href="https://www.researchgate.net/profile/Patricia_Brooks3">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/patricia-j-brooks">Campus Website</a> | contact: <a href="mailto:patricia.brooks@csi.cuny.edu" class="email">patricia.brooks@csi.cuny.edu</a></p>
 <p>Full Professor | College of Staten Island</p>
 <p>language development, media literacy, impact of technology on cognitive development, scholarship of teaching and learning (SoTL), second language acquisition</p>
 </div>
@@ -371,7 +469,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="benzion-chanowitz">Benzion Chanowitz</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=242">Campus Website</a> | contact: <a href="mailto:BenzionC@brooklyn.cuny.edu">BenzionC@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=242">Campus Website</a> | contact: <a href="mailto:BenzionC@brooklyn.cuny.edu" class="email">BenzionC@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -381,7 +479,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="sheila-chase">Sheila Chase</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/chase">Campus Website</a> | contact: <a href="mailto:schase@hunter.cuny.edu">schase@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/chase">Campus Website</a> | contact: <a href="mailto:schase@hunter.cuny.edu" class="email">schase@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -391,7 +489,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="martin-chodorow">Martin Chodorow</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/chodorow">Campus Website</a> | contact: <a href="mailto:martin.chodorow@hunter.cuny.edu">martin.chodorow@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/chodorow">Campus Website</a> | contact: <a href="mailto:martin.chodorow@hunter.cuny.edu" class="email">martin.chodorow@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 <p>proofreading, implicit memory, computational linguistics</p>
 </div>
@@ -402,7 +500,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="elizabeth-chua">Elizabeth Chua</h4>
-<p><a href="http://userhome.brooklyn.cuny.edu/echua/">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1065">Campus Website</a> | contact: <a href="mailto:echua@brooklyn.cuny.edu">echua@brooklyn.cuny.edu</a></p>
+<p><a href="http://userhome.brooklyn.cuny.edu/echua/">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1065">Campus Website</a> | contact: <a href="mailto:echua@brooklyn.cuny.edu" class="email">echua@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -413,7 +511,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="matthew-crump">Matthew Crump</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="https://crumplab.github.io">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059">Campus Website</a> | contact: <a href="mailto:MCrump@brooklyn.cuny.edu">MCrump@brooklyn.cuny.edu</a></p>
+<p><a href="https://crumplab.github.io">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1059">Campus Website</a> | contact: <a href="mailto:MCrump@brooklyn.cuny.edu" class="email">MCrump@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 <p>Computational Modeling, Learning, Memory, Attention, Performance</p>
 <p>The Crump lab uses computional and behavioral methods in cognition to investigate principles of pattern learning and pattern production. Research interests included learning, memory, attention, and performance, as well as sequence production in language and music.</p>
@@ -425,7 +523,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="andrew-delamater">Andrew Delamater</h4>
-<p><a href="http://academic.brooklyn.cuny.edu/psych/delam/">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=430">Campus Website</a> | contact: <a href="mailto:AndrewD@brooklyn.cuny.edu">AndrewD@brooklyn.cuny.edu</a></p>
+<p><a href="http://academic.brooklyn.cuny.edu/psych/delam/">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=430">Campus Website</a> | contact: <a href="mailto:AndrewD@brooklyn.cuny.edu" class="email">AndrewD@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -435,7 +533,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="jennifer-drake">Jennifer Drake</h4>
-<p><a href="http://www.jenniferedrake.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1149">Campus Website</a> | contact: <a href="mailto:JDrake@brooklyn.cuny.edu">JDrake@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.jenniferedrake.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1149">Campus Website</a> | contact: <a href="mailto:JDrake@brooklyn.cuny.edu" class="email">JDrake@brooklyn.cuny.edu</a></p>
 <p>Assistant Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -445,7 +543,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="matthew-erdelyi">Matthew Erdelyi</h4>
-<p><a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Faculty-Bios/Matthew-Erdelyi">Campus Website</a> | contact: <a href="mailto:Erdelyi@brooklyn.cuny.edu">Erdelyi@brooklyn.cuny.edu</a></p>
+<p><a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Faculty-Bios/Matthew-Erdelyi">Campus Website</a> | contact: <a href="mailto:Erdelyi@brooklyn.cuny.edu" class="email">Erdelyi@brooklyn.cuny.edu</a></p>
 <p>Emeritus Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -455,7 +553,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="paul-feinstein">Paul Feinstein</h4>
-<p><a href="http://feinstein.bioweb.hunter.cuny.edu">Lab Website</a> | <a href="http://biology.hunter.cuny.edu/index.php?option=com_content&amp;view=article&amp;id=80&amp;Itemid=96">Campus Website</a> | contact: <a href="mailto:feinstein@genectr.hunter.cuny.edu">feinstein@genectr.hunter.cuny.edu</a></p>
+<p><a href="http://feinstein.bioweb.hunter.cuny.edu">Lab Website</a> | <a href="http://biology.hunter.cuny.edu/index.php?option=com_content&amp;view=article&amp;id=80&amp;Itemid=96">Campus Website</a> | contact: <a href="mailto:feinstein@genectr.hunter.cuny.edu" class="email">feinstein@genectr.hunter.cuny.edu</a></p>
 <p>Associate Professor | Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -465,7 +563,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="yu-gao">Yu Gao</h4>
-<p><a href="https://gaopsychophysiology.wordpress.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1034">Campus Website</a> | contact: <a href="mailto:yugao@brooklyn.cuny.edu">yugao@brooklyn.cuny.edu</a></p>
+<p><a href="https://gaopsychophysiology.wordpress.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1034">Campus Website</a> | contact: <a href="mailto:yugao@brooklyn.cuny.edu" class="email">yugao@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -476,7 +574,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="stefano-ghirlanda">Stefano Ghirlanda</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="https://drghirlanda.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1048%3E">Campus Website</a> | contact: <a href="mailto:sghirlanda@brooklyn.cuny.edu">sghirlanda@brooklyn.cuny.edu</a></p>
+<p><a href="https://drghirlanda.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1048%3E">Campus Website</a> | contact: <a href="mailto:sghirlanda@brooklyn.cuny.edu" class="email">sghirlanda@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 <p>computational modeling, associative learning, motivation, cultural evolution</p>
 </div>
@@ -487,7 +585,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="james-gordon">James Gordon</h4>
-<p><a href="http://maxweber.hunter.cuny.edu/~jgordon/">Lab Website</a> | <a href="http://www.hunter.cuny.edu/biopsych/faculty/james-gordon/james-gordon">Campus Website</a> | contact: <a href="mailto:jgordon@hunter.cuny.edu">jgordon@hunter.cuny.edu</a></p>
+<p><a href="http://maxweber.hunter.cuny.edu/~jgordon/">Lab Website</a> | <a href="http://www.hunter.cuny.edu/biopsych/faculty/james-gordon/james-gordon">Campus Website</a> | contact: <a href="mailto:jgordon@hunter.cuny.edu" class="email">jgordon@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -497,7 +595,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="frank-grasso">Frank Grasso</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=18">Campus Website</a> | contact: <a href="mailto:FGrasso@brooklyn.cuny.edu">FGrasso@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=18">Campus Website</a> | contact: <a href="mailto:FGrasso@brooklyn.cuny.edu" class="email">FGrasso@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -507,7 +605,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="louise-hainline">Louise Hainline</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=41">Campus Website</a> | contact: <a href="mailto:LouiseH@brooklyn.cuny.edu">LouiseH@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=41">Campus Website</a> | contact: <a href="mailto:LouiseH@brooklyn.cuny.edu" class="email">LouiseH@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -517,7 +615,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="curtis-hardin">Curtis Hardin</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=543">Campus Website</a> | contact: <a href="mailto:cdhardin@brooklyn.cuny.edu">cdhardin@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=543">Campus Website</a> | contact: <a href="mailto:cdhardin@brooklyn.cuny.edu" class="email">cdhardin@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -527,7 +625,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="cheryl-harding">Cheryl Harding</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/inactive/harding">Campus Website</a> | contact: <a href="mailto:harding@genectr.hunter.cuny.edu">harding@genectr.hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/inactive/harding">Campus Website</a> | contact: <a href="mailto:harding@genectr.hunter.cuny.edu" class="email">harding@genectr.hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -537,7 +635,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="nancy-hemmes">Nancy Hemmes</h4>
-<p><a href="http://qcpages.qc.cuny.edu/psychology/people/faculty/hemmes.html">Campus Website</a> | contact: <a href="mailto:nancy.hemmes@qc.cuny.edu">nancy.hemmes@qc.cuny.edu</a></p>
+<p><a href="http://qcpages.qc.cuny.edu/psychology/people/faculty/hemmes.html">Campus Website</a> | contact: <a href="mailto:nancy.hemmes@qc.cuny.edu" class="email">nancy.hemmes@qc.cuny.edu</a></p>
 <p>Full Professor | Queen’s College</p>
 </div>
 <div class="col-sm-3">
@@ -547,7 +645,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="jon-horvitz">Jon Horvitz</h4>
-<p><a href="https://www.ccny.cuny.edu/profiles/jon-horvitz">Campus Website</a> | contact: <a href="mailto:jon.horvitz.ccny@gmail.com">jon.horvitz.ccny@gmail.com</a></p>
+<p><a href="https://www.ccny.cuny.edu/profiles/jon-horvitz">Campus Website</a> | contact: <a href="mailto:jon.horvitz.ccny@gmail.com" class="email">jon.horvitz.ccny@gmail.com</a></p>
 <p>City College</p>
 </div>
 <div class="col-sm-3">
@@ -558,7 +656,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="natalie-kacinik">Natalie Kacinik</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=803">Campus Website</a> | contact: <a href="mailto:NKacinik@brooklyn.cuny.edu">NKacinik@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=803">Campus Website</a> | contact: <a href="mailto:NKacinik@brooklyn.cuny.edu" class="email">NKacinik@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 <p>Psycholinguistics, Cognitive Neuroscience, Embodied Cognition, Semantics, Figurative Language, Pragmatics</p>
 </div>
@@ -569,7 +667,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="lana-karasik">Lana Karasik</h4>
-<p><a href="https://www.csi.cuny.edu/campus-directory/lana-karasik">Campus Website</a> | contact: <a href="mailto:lana.karasik@csi.cuny.edu">lana.karasik@csi.cuny.edu</a></p>
+<p><a href="https://www.csi.cuny.edu/campus-directory/lana-karasik">Campus Website</a> | contact: <a href="mailto:lana.karasik@csi.cuny.edu" class="email">lana.karasik@csi.cuny.edu</a></p>
 <p>College of Staten Island</p>
 </div>
 <div class="col-sm-3">
@@ -579,7 +677,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="aaron-kozbelt">Aaron Kozbelt</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=437">Campus Website</a> | contact: <a href="mailto:AaronK@brooklyn.cuny.edu">AaronK@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=437">Campus Website</a> | contact: <a href="mailto:AaronK@brooklyn.cuny.edu" class="email">AaronK@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -589,7 +687,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="daniel-kurylo">Daniel Kurylo</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=35">Campus Website</a> | contact: <a href="mailto:DKurylo@brooklyn.cuny.edu">DKurylo@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=35">Campus Website</a> | contact: <a href="mailto:DKurylo@brooklyn.cuny.edu" class="email">DKurylo@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 <p>visual perception, perceptual organization</p>
 </div>
@@ -600,7 +698,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="david-lahti">David Lahti</h4>
-<p><a href="http://qcpages.qc.cuny.edu/Biology/Lahti/">Lab Website</a> | <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Biology/Faculty-Bios/Lahti,-David-C">Campus Website</a> | contact: <a href="mailto:david.lahti@qc.cuny.edu">david.lahti@qc.cuny.edu</a></p>
+<p><a href="http://qcpages.qc.cuny.edu/Biology/Lahti/">Lab Website</a> | <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Biology/Faculty-Bios/Lahti,-David-C">Campus Website</a> | contact: <a href="mailto:david.lahti@qc.cuny.edu" class="email">david.lahti@qc.cuny.edu</a></p>
 <p>Queen’s College</p>
 </div>
 <div class="col-sm-3">
@@ -610,7 +708,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="jonathan-levitt">Jonathan Levitt</h4>
-<p><a href="https://www.ccny.cuny.edu/profiles/jonathan-levitt">Campus Website</a> | contact: <a href="mailto:jlevitt@ccny.cuny.edu">jlevitt@ccny.cuny.edu</a></p>
+<p><a href="https://www.ccny.cuny.edu/profiles/jonathan-levitt">Campus Website</a> | contact: <a href="mailto:jlevitt@ccny.cuny.edu" class="email">jlevitt@ccny.cuny.edu</a></p>
 <p>City College</p>
 </div>
 <div class="col-sm-3">
@@ -620,7 +718,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="victoria-luine">Victoria Luine</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/inactive/luine">Campus Website</a> | contact: <a href="mailto:vluine@hunter.cuny.edu">vluine@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/inactive/luine">Campus Website</a> | contact: <a href="mailto:vluine@hunter.cuny.edu" class="email">vluine@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -631,7 +729,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="jennifer-mangels">Jennifer Mangels</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="http://www.mangelslab.org">Lab Website</a> | <a href="http://www.baruch.cuny.edu/wsas/academics/psychology/jmangels.htm">Campus Website</a> | contact: <a href="mailto:jenimangels@gmail.com">jenimangels@gmail.com</a></p>
+<p><a href="http://www.mangelslab.org">Lab Website</a> | <a href="http://www.baruch.cuny.edu/wsas/academics/psychology/jmangels.htm">Campus Website</a> | contact: <a href="mailto:jenimangels@gmail.com" class="email">jenimangels@gmail.com</a></p>
 <p>Full Professor | Baruch College</p>
 <p>Memory, Attention, Decision-Making</p>
 </div>
@@ -642,7 +740,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="dan-mccloskey">Dan McCloskey</h4>
-<p><a href="http://mccloskey.neuro.nyc/#/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/dan-mccloskey">Campus Website</a> | contact: <a href="mailto:dan.mccloskey@csi.cuny.edu">dan.mccloskey@csi.cuny.edu</a></p>
+<p><a href="http://mccloskey.neuro.nyc/#/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/dan-mccloskey">Campus Website</a> | contact: <a href="mailto:dan.mccloskey@csi.cuny.edu" class="email">dan.mccloskey@csi.cuny.edu</a></p>
 <p>College of Staten Island</p>
 </div>
 <div class="col-sm-3">
@@ -652,7 +750,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="laraine-mcdonough">Laraine McDonough</h4>
-<p><a href="http://academic.brooklyn.cuny.edu/userhome/psych/lmcdonou/index.htm">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=581">Campus Website</a> | contact: <a href="mailto:LaraineM@brooklyn.cuny.edu">LaraineM@brooklyn.cuny.edu</a></p>
+<p><a href="http://academic.brooklyn.cuny.edu/userhome/psych/lmcdonou/index.htm">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=581">Campus Website</a> | contact: <a href="mailto:LaraineM@brooklyn.cuny.edu" class="email">LaraineM@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -662,7 +760,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="robert-melara">Robert Melara</h4>
-<p><a href="https://www.ccny.cuny.edu/profiles/robert-melara">Campus Website</a> | contact: <a href="mailto:rmelara@ccny.cuny.edu">rmelara@ccny.cuny.edu</a></p>
+<p><a href="https://www.ccny.cuny.edu/profiles/robert-melara">Campus Website</a> | contact: <a href="mailto:rmelara@ccny.cuny.edu" class="email">rmelara@ccny.cuny.edu</a></p>
 <p>City College</p>
 </div>
 <div class="col-sm-3">
@@ -672,7 +770,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="regina-miranda">Regina Miranda</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/miranda">Campus Website</a> | contact: <a href="mailto:regina.miranda@hunter.cuny.edu">regina.miranda@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/miranda">Campus Website</a> | contact: <a href="mailto:regina.miranda@hunter.cuny.edu" class="email">regina.miranda@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -682,7 +780,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="peter-moller">Peter Moller</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/moller">Campus Website</a> | contact: <a href="mailto:pmoller@hunter.cuny.edu">pmoller@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/moller">Campus Website</a> | contact: <a href="mailto:pmoller@hunter.cuny.edu" class="email">pmoller@hunter.cuny.edu</a></p>
 <p>College of Staten Island</p>
 </div>
 <div class="col-sm-3">
@@ -692,7 +790,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="bertram-ploog">Bertram Ploog</h4>
-<p><a href="https://www.csi.cuny.edu/campus-directory/bertram-o-ploog">Campus Website</a> | contact: <a href="mailto:Bertram.Ploog@csi.cuny.edu">Bertram.Ploog@csi.cuny.edu</a></p>
+<p><a href="https://www.csi.cuny.edu/campus-directory/bertram-o-ploog">Campus Website</a> | contact: <a href="mailto:Bertram.Ploog@csi.cuny.edu" class="email">Bertram.Ploog@csi.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -703,7 +801,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="joshua-plotnik">Joshua Plotnik</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="https://ccconservation.org">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/plotnik">Campus Website</a> | contact: <a href="mailto:joshua.plotnik@hunter.cuny.edu">joshua.plotnik@hunter.cuny.edu</a></p>
+<p><a href="https://ccconservation.org">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/plotnik">Campus Website</a> | contact: <a href="mailto:joshua.plotnik@hunter.cuny.edu" class="email">joshua.plotnik@hunter.cuny.edu</a></p>
 <p>Assistant Professor | Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -713,7 +811,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="sandeep-prasada">Sandeep Prasada</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/prasada">Campus Website</a> | contact: <a href="mailto:sandeep.prasada@hunter.cuny.edu">sandeep.prasada@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/prasada">Campus Website</a> | contact: <a href="mailto:sandeep.prasada@hunter.cuny.edu" class="email">sandeep.prasada@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -723,7 +821,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="thomas-preuss">Thomas Preuss</h4>
-<p><a href="http://urban.hunter.cuny.edu/~preuss/">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/preuss">Campus Website</a> | contact: <a href="mailto:tpreuss@hunter.cuny.edu">tpreuss@hunter.cuny.edu</a></p>
+<p><a href="http://urban.hunter.cuny.edu/~preuss/">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/preuss">Campus Website</a> | contact: <a href="mailto:tpreuss@hunter.cuny.edu" class="email">tpreuss@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -733,7 +831,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="carolyn-pytte">Carolyn Pytte</h4>
-<p><a href="http://qcpages.qc.cuny.edu/~cpytte/">Lab Website</a> | <a href="http://qcpages.qc.cuny.edu/~cpytte/">Campus Website</a> | contact: <a href="mailto:carolyn.pytte@qc.cuny.edu">carolyn.pytte@qc.cuny.edu</a></p>
+<p><a href="http://qcpages.qc.cuny.edu/~cpytte/">Lab Website</a> | <a href="http://qcpages.qc.cuny.edu/~cpytte/">Campus Website</a> | contact: <a href="mailto:carolyn.pytte@qc.cuny.edu" class="email">carolyn.pytte@qc.cuny.edu</a></p>
 <p>Queen’s College</p>
 </div>
 <div class="col-sm-3">
@@ -743,7 +841,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="robert-ranaldi">Robert Ranaldi</h4>
-<p><a href="http://qcpages.qc.cuny.edu/Psychology/people/faculty/ranaldi/Welcome.html">Lab Website</a> | <a href="http://psychology.qc.cuny.edu/full-time-faculty/ranaldi/">Campus Website</a> | contact: <a href="mailto:Robert.Ranaldi@qc.cuny.edu">Robert.Ranaldi@qc.cuny.edu</a></p>
+<p><a href="http://qcpages.qc.cuny.edu/Psychology/people/faculty/ranaldi/Welcome.html">Lab Website</a> | <a href="http://psychology.qc.cuny.edu/full-time-faculty/ranaldi/">Campus Website</a> | contact: <a href="mailto:Robert.Ranaldi@qc.cuny.edu" class="email">Robert.Ranaldi@qc.cuny.edu</a></p>
 <p>Queen’s College</p>
 </div>
 <div class="col-sm-3">
@@ -753,7 +851,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="diana-reiss">Diana Reiss</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/reiss">Campus Website</a> | contact: <a href="mailto:diana.reiss@hunter.cuny.edu">diana.reiss@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/reiss">Campus Website</a> | contact: <a href="mailto:diana.reiss@hunter.cuny.edu" class="email">diana.reiss@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -764,7 +862,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="timothy-ricker">Timothy Ricker</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="https://www.rickermemorylab.com/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/timothy-ricker">Campus Website</a> | contact: <a href="mailto:Timothy.Ricker@csi.cuny.edu">Timothy.Ricker@csi.cuny.edu</a></p>
+<p><a href="https://www.rickermemorylab.com/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/timothy-ricker">Campus Website</a> | contact: <a href="mailto:Timothy.Ricker@csi.cuny.edu" class="email">Timothy.Ricker@csi.cuny.edu</a></p>
 <p>Assistant Professor | College of Staten Island</p>
 <p>Working Memory, Multi-Tasking, Attention, Consolidation</p>
 <p>The Memory &amp; Attention Lab at CUNY investigates how information within the working memory system is maintained and forgotten. We use behavioral experimentation, mathematical process modeling, and Bayesian estimation in support of this goal. More specific areas of investigation include the effects of time, multi-tasking, and complexity on short-term retention.</p>
@@ -776,7 +874,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="robert-rockwell">Robert Rockwell</h4>
-<p><a href="http://research.amnh.org/users/rfr/">Lab Website</a> | <a href="https://www.ccny.cuny.edu/profiles/robert-rockwell">Campus Website</a> | contact: <a href="mailto:rfr@amnh.org">rfr@amnh.org</a></p>
+<p><a href="http://research.amnh.org/users/rfr/">Lab Website</a> | <a href="https://www.ccny.cuny.edu/profiles/robert-rockwell">Campus Website</a> | contact: <a href="mailto:rfr@amnh.org" class="email">rfr@amnh.org</a></p>
 <p>City College</p>
 </div>
 <div class="col-sm-3">
@@ -787,7 +885,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="irina-sekerina">Irina Sekerina</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="http://csivc.csi.cuny.edu/Irina.Sekerina/files/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/irina-sekerina">Campus Website</a> | contact: <a href="mailto:Irina.Sekerina@csi.cuny.edu">Irina.Sekerina@csi.cuny.edu</a></p>
+<p><a href="http://csivc.csi.cuny.edu/Irina.Sekerina/files/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/irina-sekerina">Campus Website</a> | contact: <a href="mailto:Irina.Sekerina@csi.cuny.edu" class="email">Irina.Sekerina@csi.cuny.edu</a></p>
 <p>College of Staten Island</p>
 <p>bilingualism, Russian, heritage languages, eye-tracking, language acquisition, psycholinguistics</p>
 </div>
@@ -798,7 +896,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="peter-serrano">Peter Serrano</h4>
-<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/serrano">Campus Website</a> | contact: <a href="mailto:pserran@hunter.cuny.edu">pserran@hunter.cuny.edu</a></p>
+<p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/serrano">Campus Website</a> | contact: <a href="mailto:pserran@hunter.cuny.edu" class="email">pserran@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -808,7 +906,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="jacob-shane">Jacob Shane</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1244">Campus Website</a> | contact: <a href="mailto:JShane@brooklyn.cuny.edu">JShane@brooklyn.cuny.edu</a></p>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1244">Campus Website</a> | contact: <a href="mailto:JShane@brooklyn.cuny.edu" class="email">JShane@brooklyn.cuny.edu</a></p>
 <p>Assistant Professor | Brooklyn College</p>
 </div>
 <div class="col-sm-3">
@@ -818,7 +916,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="justin-storbeck">Justin Storbeck</h4>
-<p><a href="http://qcpages.qc.cuny.edu/~jstorbeck/index.htm">Lab Website</a> | <a href="http://psychology.qc.cuny.edu/full-time-faculty/justin-storbeck/">Campus Website</a> | contact: <a href="mailto:justin.storbeck@qc.cuny.edu">justin.storbeck@qc.cuny.edu</a></p>
+<p><a href="http://qcpages.qc.cuny.edu/~jstorbeck/index.htm">Lab Website</a> | <a href="http://psychology.qc.cuny.edu/full-time-faculty/justin-storbeck/">Campus Website</a> | contact: <a href="mailto:justin.storbeck@qc.cuny.edu" class="email">justin.storbeck@qc.cuny.edu</a></p>
 <p>Queen’s College</p>
 </div>
 <div class="col-sm-3">
@@ -828,7 +926,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="vivien-tartter">Vivien Tartter</h4>
-<p><a href="https://www.ccny.cuny.edu/profiles/vivien-tartter">Campus Website</a> | contact: <a href="mailto:vivienct@gmail.com">vivienct@gmail.com</a></p>
+<p><a href="https://www.ccny.cuny.edu/profiles/vivien-tartter">Campus Website</a> | contact: <a href="mailto:vivienct@gmail.com" class="email">vivienct@gmail.com</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -838,7 +936,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="ofer-tchernichowski">Ofer Tchernichowski</h4>
-<p><a href="http://ofer.hunter.cuny.edu">Lab Website</a> | <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Faculty-Bios/Ofer-Tchernichowski">Campus Website</a> | contact: <a href="mailto:otcherni@hunter.cuny.edu">otcherni@hunter.cuny.edu</a></p>
+<p><a href="http://ofer.hunter.cuny.edu">Lab Website</a> | <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Faculty-Bios/Ofer-Tchernichowski">Campus Website</a> | contact: <a href="mailto:otcherni@hunter.cuny.edu" class="email">otcherni@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -849,7 +947,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="virginia-valian">Virginia Valian</h4>
 <p><a href="https://ccp-cuny.github.io/Apply.html">Accepting Ph.D. Applications for Fall 2019</a></p>
-<p><a href="https://www.virginiavalian.org">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/valian">Campus Website</a> | contact: <a href="mailto:VValian@gc.cuny.edu">VValian@gc.cuny.edu</a></p>
+<p><a href="https://www.virginiavalian.org">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/valian">Campus Website</a> | contact: <a href="mailto:VValian@gc.cuny.edu" class="email">VValian@gc.cuny.edu</a></p>
 <p>Distinguished Professor | Hunter College</p>
 <p>child language, bilingualism, gender</p>
 </div>
@@ -859,8 +957,18 @@ div.tocify {
 </div>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
+<h4 id="jennifer-wagner">Jennifer Wagner</h4>
+<p><a href="http://www.csibabylab.com">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/jennifer-wagner">Campus Website</a> | contact: <a href="mailto:jennifer.wagner@csi.cuny.edu" class="email">jennifer.wagner@csi.cuny.edu</a></p>
+<p>Assistant Professor | College of Staten Island</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Wagner.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
 <h4 id="mariaan-weierich">Mariaan Weierich</h4>
-<p><a href="http://www.weierichlab.com">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/clinical-psychology/weierich-1">Campus Website</a> | contact: <a href="mailto:mariann.weierich@hunter.cuny.edu">mariann.weierich@hunter.cuny.edu</a></p>
+<p><a href="http://www.weierichlab.com">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/clinical-psychology/weierich-1">Campus Website</a> | contact: <a href="mailto:mariann.weierich@hunter.cuny.edu" class="email">mariann.weierich@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
@@ -870,7 +978,7 @@ div.tocify {
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="steven-young">Steven Young</h4>
-<p><a href="https://sites.google.com/site/stevengrahamyoung/">Lab Website</a> | <a href="http://www.baruch.cuny.edu/wsas/academics/psychology/StevenYoung.htm">Campus Website</a> | contact: <a href="mailto:Steven.Young@baruch.cuny.edu">Steven.Young@baruch.cuny.edu</a></p>
+<p><a href="https://sites.google.com/site/stevengrahamyoung/">Lab Website</a> | <a href="http://www.baruch.cuny.edu/wsas/academics/psychology/StevenYoung.htm">Campus Website</a> | contact: <a href="mailto:Steven.Young@baruch.cuny.edu" class="email">Steven.Young@baruch.cuny.edu</a></p>
 <p>Baruch College</p>
 </div>
 <div class="col-sm-3">
