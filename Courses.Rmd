@@ -6,8 +6,10 @@ output: html_document
 A sample of recent courses offered:
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=TRUE}
+
+# populates a table from the CourseInfo on the CCP-CUNY spreadsheet
+
 library(googlesheets)
-#gs_ls()
 web_df <- gs_title("CCP-CUNY")
 ss_df <- gs_read(ss=web_df, ws = 'CourseInfo', skip=0)
 knitr::kable(ss_df)

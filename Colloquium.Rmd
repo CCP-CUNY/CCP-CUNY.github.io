@@ -5,26 +5,31 @@ output: html_document
 
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=TRUE, results='asis'}
+# This code chunk reads data from a google sheet to 
+# populate the colloquium schedule
+
+# load libraries
 library(googlesheets)
 library(dplyr)
-#gs_ls()
-web_df <- gs_title("CCP-CUNY")
-ss_df <- gs_read(ss=web_df, ws = 'Colloquium', skip=0)
 
-# sort bib_df by year
-ss_df<-ss_df[order(ss_df$Date, decreasing=T),]
+web_df <- gs_title("CCP-CUNY") # loads CCP-CUNY sheet
+ss_df <- gs_read(ss=web_df, ws = 'Colloquium', skip=0) # read Colloquium tab
 
-dims<-dim(ss_df)
+ss_df <- ss_df[order(ss_df$Date, decreasing=T),] # order by date
 
+dims <- dim(ss_df) #get the dimensions row,column
+
+# loop through each row of the spreadsheet
+# and write the markdown for each entry
+# that will be displayed on website
 for(i in 1:dims[1]){
   
-  cat(c("####",ss_df[i,]$Title)) #title
+  cat(c("####",ss_df[i,]$Title))
   cat(c("\n"))
   cat(c(ss_df[i,]$First, ss_df[i,]$Last), sep=" ")
   cat(c(", ", ss_df[i,]$Rank, sep=""))
   cat(c(", ", ss_df[i,]$Department, sep=""))
   cat(c("\n\n"))
-  
   cat(c("**Day**: ", as.character(ss_df[i,]$Date)), sep=" ")
   cat(c("\n\n"))
   cat(c("**Time**: ", ss_df[i,]$Time), sep=" ")
