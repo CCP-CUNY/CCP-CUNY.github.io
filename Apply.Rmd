@@ -5,7 +5,7 @@ output: html_document
 
 [https://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions](https://www.gc.cuny.edu/Prospective-Current-Students/Prospective-Students/Admissions)
 
-Application deadline is Dec 1. 2018
+Application deadline is December 1st.
 
 ## Why choose CCP?
 
