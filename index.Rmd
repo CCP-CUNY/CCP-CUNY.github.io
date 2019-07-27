@@ -80,7 +80,7 @@ slickR(files,width="100%",
          cssEase= 'linear',
          dots = F,
          autoplay = T,
-          autoplaySpeed = 2500
+          autoplaySpeed = 6000
        ))
 #for(i in 1:length(files)){
 #  cat("![](",files[i],")", sep="")
