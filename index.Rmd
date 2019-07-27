@@ -17,7 +17,12 @@ output: html_document
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-# **Cognitive and Comparative Psychology CCP @ CUNY **
+<!--# **Cognitive and Comparative Psychology CCP @ CUNY ** -->
+
+```{r, echo=F}
+knitr::include_graphics("images/CCP_logo.png")
+```
+
 
 ### Mission Statement
 
@@ -41,20 +46,50 @@ ph:  718 951-5000 x6026
 <div class="col-sm-6">
 
 ```{r, echo=F}
-knitr::include_graphics("images/CCP_logo.png")
-```
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-```{r, echo=F}
 knitr::include_graphics("images/CunyLogos/Consortial_cuny.png")
 ```
+
+---
+
+<script>
+
+$("slick").on("init reInit", function() {
+      var i = $('.tabnavdots_wrapper ul li').length;
+      var initalSlide = $("slick").attr("random") ? Math.floor(Math.random() * i) : 0;
+      $("slick").slick('slickGoTo', initalSlide);
+  });
+  
+</script>  
+
+```{r, echo=F, results='asis', message=FALSE}
+library(knitr)
+library(slickR)
+files <- list.files("images/researchpng")
+files <- paste("images/researchpng/",files, sep="")
+
+#dat <- read_exif(files)
+#height='375px'
+
+slickR(files,width="100%",
+       slickOpts = list(
+         arrows = F,
+         initialSlide = 1,
+         slidesToShow = 1,
+         focusOnSelect = T,
+         fade = T,
+         cssEase= 'linear',
+         dots = F,
+         autoplay = T,
+          autoplaySpeed = 2500
+       ))
+#for(i in 1:length(files)){
+#  cat("![](",files[i],")", sep="")
+#}
+```
+
+---
+
+
 
 
 

@@ -1,16 +1,14 @@
 ---
-title: "People"
 output:
   html_document:
-    toc: true
-    toc_float: true
-    collapsed: false
-    number_sections: false
-    toc_depth: 4
     css: style.css
 ---
 
-## Faculty
+<br>
+
+# Faculty and Students {.tabset}
+
+## Primary Faculty
 
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=T, results="asis"}
@@ -22,6 +20,9 @@ ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
 library(dplyr)
 ss_df<-arrange(ss_df, Last)
 ss_df$Image[is.na(ss_df$Image)==TRUE]<-" "
+
+ss_df <- ss_df %>%
+          filter(PrimaryAffiliation == "CCP")
 
 dims<-dim(ss_df)
 
@@ -76,10 +77,141 @@ cat(c("</div>"))
 
 ```
 
+## Affiliate Faculty
+
+
+```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=T, results="asis"}
+library(googlesheets)
+#gs_ls()
+web_df <- gs_title("CCP-CUNY")
+ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
+
+library(dplyr)
+ss_df<-arrange(ss_df, Last)
+ss_df$Image[is.na(ss_df$Image)==TRUE]<-" "
+
+ss_df <- ss_df %>%
+          filter(PrimaryAffiliation == "Affiliate")
+
+dims<-dim(ss_df)
+
+for(i in 1:dims[1]){
+cat(c("<div class=\"row\" style=\"padding-top: 30px;\">"))
+cat(c("<div class=\"col-sm-9\">"))
+cat(c("\n"))
+cat(c("#### ", ss_df$First[i], ss_df$Last[i]))
+cat(c("\n"))
+cat(c("\n"))
+
+#if(is.na(ss_df$TakingStudents[i])==FALSE){
+#  cat(c("[Accepting Ph.D. Applications for Fall #2019](https://ccp-cuny.github.io/Apply.html)"))
+#  cat(c("\n"))
+#  cat(c("\n"))
+#}
+
+
+if(is.na(ss_df$LabWebsite[i])==FALSE){
+cat(c("[Lab Website](", ss_df$LabWebsite[i],") | [Campus Website](", ss_df$CollegeWebsite[i],")","| contact:",ss_df$Email[i]))
+}else{
+cat(c("[Campus Website](", ss_df$CollegeWebsite[i],") | contact: ",ss_df$Email[i]))
+}
+cat(c("\n"))
+cat(c("\n"))
+if(is.na(ss_df$Rank[i])==FALSE){
+cat(c(ss_df$Rank[i], "Professor | ", ss_df$Campus[i]))
+}else{
+cat(c(ss_df$Campus[i]))  
+}
+cat(c("\n"))
+cat(c("\n"))
+if(is.na(ss_df$Keywords[i])==FALSE){
+cat(c(ss_df$Keywords[i]))
+}else{
+  
+}
+cat(c("\n"))
+cat(c("\n"))
+if(is.na(ss_df$Statement[i])==FALSE){
+cat(c(ss_df$Statement[i]))
+}else{
+  
+}
+cat(c("\n"))
+cat(c("</div>"))
+cat(c("<div class=\"col-sm-3\">"))
+cat(c("<img src=\"images/facultypng/",ss_df$Last[i],".png\" alt=\"peopleimg\">"),sep="")
+cat(c("</div>"))
+cat(c("</div>"))
+}
+
+```
 
 ## Students
 
-```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=TRUE}
+```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=T, results="asis"}
+library(googlesheets)
+#gs_ls()
+web_df <- gs_title("CCP-CUNY")
+ss_df <- gs_read(ss=web_df, ws = 'StudentInfo', skip=0)
+
+library(dplyr)
+ss_df<-arrange(ss_df, Last)
+ss_df$Image[is.na(ss_df$Image)==TRUE]<-" "
+
+dims<-dim(ss_df)
+
+for(i in 1:dims[1]){
+cat(c("<div class=\"row\" style=\"padding-top: 30px;\">"))
+cat(c("<div class=\"col-sm-9\">"))
+cat(c("\n"))
+cat(c("#### ", ss_df$First[i], ss_df$Last[i]))
+cat(c("\n"))
+cat(c("\n"))
+
+#if(is.na(ss_df$TakingStudents[i])==FALSE){
+#  cat(c("[Accepting Ph.D. Applications for Fall #2019](https://ccp-cuny.github.io/Apply.html)"))
+#  cat(c("\n"))
+#  cat(c("\n"))
+#}
+
+
+if(is.na(ss_df$LabWebsite[i])==FALSE){
+cat(c("[Lab Website](", ss_df$LabWebsite[i],") | [Campus Website](", ss_df$CollegeWebsite[i],")","| contact:",ss_df$Email[i]))
+}else{
+cat(c("[Campus Website](", ss_df$CollegeWebsite[i],") | contact: ",ss_df$Email[i]))
+}
+cat(c("\n"))
+cat(c("\n"))
+if(is.na(ss_df$Rank[i])==FALSE){
+cat(c("Doctoral ", ss_df$Rank[i]," | ", ss_df$Campus[i]))
+}else{
+cat(c(ss_df$Campus[i]))  
+}
+cat(c("\n"))
+cat(c("\n"))
+if(is.na(ss_df$Keywords[i])==FALSE){
+cat(c(ss_df$Keywords[i]))
+}else{
+  
+}
+cat(c("\n"))
+cat(c("\n"))
+if(is.na(ss_df$Statement[i])==FALSE){
+cat(c(ss_df$Statement[i]))
+}else{
+  
+}
+cat(c("\n"))
+cat(c("</div>"))
+cat(c("<div class=\"col-sm-3\">"))
+cat(c("<img src=\"images/studentpng/missing.png\" alt=\"peopleimg\">"),sep="")
+cat(c("</div>"))
+cat(c("</div>"))
+}
+
+```
+
+```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval= FALSE}
 library(googlesheets)
 library(dplyr)
 

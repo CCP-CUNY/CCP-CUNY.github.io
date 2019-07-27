@@ -11,7 +11,7 @@
 
 
 
-<title>People</title>
+<title>People.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,9 +19,6 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -264,90 +261,6 @@ $(document).ready(function () {
 
 
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3,h4",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
-
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -355,16 +268,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -411,13 +314,15 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">People</h1>
 
 </div>
 
 
-<div id="faculty" class="section level2">
-<h2>Faculty</h2>
+<p><br></p>
+<div id="faculty-and-students" class="section level1 tabset">
+<h1>Faculty and Students</h1>
+<div id="primary-faculty" class="section level2">
+<h2>Primary Faculty</h2>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
 <h4 id="israel-abramov">Israel Abramov</h4>
@@ -426,16 +331,6 @@ div.tocify {
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Abramov.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="jennifer-basil">Jennifer Basil</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=92">Campus Website</a> | contact: <a href="mailto:jbasil@brooklyn.cuny.edu" class="email">jbasil@brooklyn.cuny.edu</a></p>
-<p>Full Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Basil.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -450,16 +345,6 @@ div.tocify {
 </div>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
-<h4 id="elisabeth-brauner">Elisabeth Brauner</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=431">Campus Website</a> | contact: <a href="mailto:EBrauner@brooklyn.cuny.edu" class="email">EBrauner@brooklyn.cuny.edu</a></p>
-<p>Full Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Brauner.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
 <h4 id="patricia-brooks">Patricia Brooks</h4>
 <p><a href="https://www.researchgate.net/profile/Patricia_Brooks3">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/patricia-j-brooks">Campus Website</a> | contact: <a href="mailto:patricia.brooks@csi.cuny.edu" class="email">patricia.brooks@csi.cuny.edu</a></p>
 <p>Full Professor | College of Staten Island</p>
@@ -467,16 +352,6 @@ div.tocify {
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Brooks.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="benzion-chanowitz">Benzion Chanowitz</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=242">Campus Website</a> | contact: <a href="mailto:BenzionC@brooklyn.cuny.edu" class="email">BenzionC@brooklyn.cuny.edu</a></p>
-<p>Associate Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Chanowitz.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -505,6 +380,8 @@ div.tocify {
 <h4 id="elizabeth-chua">Elizabeth Chua</h4>
 <p><a href="http://userhome.brooklyn.cuny.edu/echua/">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1065">Campus Website</a> | contact: <a href="mailto:echua@brooklyn.cuny.edu" class="email">echua@brooklyn.cuny.edu</a></p>
 <p>Associate Professor | Brooklyn College</p>
+<p>memory, metacognition, metamemory</p>
+<p>The Memory and Metacognition lab examines how information is encoded and retrieved, and also how we monitor and control our memory. We use a combination of behavioral and cognitive neuroscience techniques.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Chua.png" alt="peopleimg">
@@ -527,29 +404,12 @@ div.tocify {
 <h4 id="andrew-delamater">Andrew Delamater</h4>
 <p><a href="http://academic.brooklyn.cuny.edu/psych/delam/">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=430">Campus Website</a> | contact: <a href="mailto:AndrewD@brooklyn.cuny.edu" class="email">AndrewD@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
+<p>Associative Learning, Interval Timing, Event Representation, Decision Making, Neural Networks and Learning</p>
+<p>My research focuses on investigations of the psychological and neurobiological foundations of simple forms of learning and decision-making, mostly with laboratory rodents. We ask how the rat learns to represent different aspects of reward (e.g., what it is, when it occurs, its value) and use that information to guide its behavior. One guiding principle is that different psychological and neurobiological systems underlie learning about different reward features, and we explore this using various sophisticated behavioral methods (e.g., reward devaluation, Pavlovian-to-instrumental transfer tasks) together with popular neurobiological techniques (DREADDs, local brain inactivation, lesion, protein expression, etc). Some specific ongoing projects concern: distinguishing between reward identity and time encoding (with dorsal striatal and amygdala manipulations), investigating the mechanisms of goal-directed actions and habits, effects of extinction manipulations on reward identity, time, and value encoding in Pavlovian learning, extinction of conditioned flavor preference learning, connectionist network and experimental approaches to complex conditional discrimination learning and interval timing.</p>
+<p>I am currently the director of the CCP training program at CUNY, have served as past president of the Eastern Psychological Association and the Pavlovian Society, and am the Incoming Editor of the Journal of Experimental Psychology: Animal Learning &amp; Cognition.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Delamater.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="jennifer-drake">Jennifer Drake</h4>
-<p><a href="http://www.jenniferedrake.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1149">Campus Website</a> | contact: <a href="mailto:JDrake@brooklyn.cuny.edu" class="email">JDrake@brooklyn.cuny.edu</a></p>
-<p>Assistant Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Drake.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="matthew-erdelyi">Matthew Erdelyi</h4>
-<p><a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Psychology/Faculty-Bios/Matthew-Erdelyi">Campus Website</a> | contact: <a href="mailto:Erdelyi@brooklyn.cuny.edu" class="email">Erdelyi@brooklyn.cuny.edu</a></p>
-<p>Emeritus Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Erdelyi.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -560,16 +420,6 @@ div.tocify {
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Feinstein.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="yu-gao">Yu Gao</h4>
-<p><a href="https://gaopsychophysiology.wordpress.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1034">Campus Website</a> | contact: <a href="mailto:yugao@brooklyn.cuny.edu" class="email">yugao@brooklyn.cuny.edu</a></p>
-<p>Associate Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Gao.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -601,26 +451,6 @@ div.tocify {
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Grasso.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="louise-hainline">Louise Hainline</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=41">Campus Website</a> | contact: <a href="mailto:LouiseH@brooklyn.cuny.edu" class="email">LouiseH@brooklyn.cuny.edu</a></p>
-<p>Full Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Hainline.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="curtis-hardin">Curtis Hardin</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=543">Campus Website</a> | contact: <a href="mailto:cdhardin@brooklyn.cuny.edu" class="email">cdhardin@brooklyn.cuny.edu</a></p>
-<p>Full Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Hardin.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -666,19 +496,11 @@ div.tocify {
 </div>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
-<h4 id="lana-karasik">Lana Karasik</h4>
-<p><a href="https://www.csi.cuny.edu/campus-directory/lana-karasik">Campus Website</a> | contact: <a href="mailto:lana.karasik@csi.cuny.edu" class="email">lana.karasik@csi.cuny.edu</a></p>
-<p>College of Staten Island</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Karasik.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
 <h4 id="aaron-kozbelt">Aaron Kozbelt</h4>
 <p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=437">Campus Website</a> | contact: <a href="mailto:AaronK@brooklyn.cuny.edu" class="email">AaronK@brooklyn.cuny.edu</a></p>
 <p>Full Professor | Brooklyn College</p>
+<p>creativity, psychological aesthetics, evolution, humor, perception, metacognition</p>
+<p>Aaron Kozbelt’s research program, focusing on creativity and cognition in the arts, derives largely from his outside interests. In addition to his academic training in psychology, he has spent several decades as a practicing visual artist, and his initial research forays grew directly out of his experiences as an artist. Major lines of research examine the creative process in visual art and the nature of artists’ perceptual advantages over non-artists. Kozbelt has also incorporated his long-standing interest in classical music into a line of archival research examining patterns of creativity over the lifespan of classical composers. More recently, he has started research on evolutionary aesthetics, humor production and sexual selection, giftedness in the arts, and metacognition and evaluation in creative problem solving.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Kozbelt.png" alt="peopleimg">
@@ -699,7 +521,9 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="david-lahti">David Lahti</h4>
 <p><a href="http://qcpages.qc.cuny.edu/Biology/Lahti/">Lab Website</a> | <a href="https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Biology/Faculty-Bios/Lahti,-David-C">Campus Website</a> | contact: <a href="mailto:david.lahti@qc.cuny.edu" class="email">david.lahti@qc.cuny.edu</a></p>
-<p>Queen’s College</p>
+<p>Associate Professor | Queen’s College</p>
+<p>adaptation, natural selection, cultural evolution, learning</p>
+<p>David Lahti is interested in the function and evolution of complex traits, especially those that involve learning. His lab focuses on rapid evolution following species introduction, the interplay between nature and nurture, and cultural evolution.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Lahti.png" alt="peopleimg">
@@ -720,6 +544,8 @@ div.tocify {
 <h4 id="dina-lipkind">Dina Lipkind</h4>
 <p><a href="https://www.york.cuny.edu/portal_college/dlipkind">Campus Website</a> | contact: <a href="mailto:DLipkind@york.cuny.edu" class="email">DLipkind@york.cuny.edu</a></p>
 <p>Assistant Professor | York College</p>
+<p>animal behavior, vocal learning, skill learning</p>
+<p>Many of the tasks in our daily lives, from spoken language to using utensils, involve complex behaviors learned during infancy. I am interested in the developmental learning of complex skills in animals and humans. As an animal model system I use the zebra finch, a songbird species capable of vocal imitation. I study how juvenile males learn the courtship song of their father, using experimental and computational approaches to manipulate and analyze the birds’ vocal development. The insights and computational tools obtained from studying songbirds are applied to the analysis of vocal development data of human infants.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Lipkind.png" alt="peopleimg">
@@ -740,7 +566,8 @@ div.tocify {
 <h4 id="jennifer-mangels">Jennifer Mangels</h4>
 <p><a href="http://www.mangelslab.org">Lab Website</a> | <a href="http://www.baruch.cuny.edu/wsas/academics/psychology/jmangels.htm">Campus Website</a> | contact: <a href="mailto:jenimangels@gmail.com" class="email">jenimangels@gmail.com</a></p>
 <p>Full Professor | Baruch College</p>
-<p>Memory, Attention, Decision-Making</p>
+<p>memory, learning, attention, decision making, motivation, EEG, ERP, eye-tracking</p>
+<p>Seeking out knowledge is a dynamic motivational state. The overarching goal of our research is to understand how the to-be-learned material, the motivation of the individual learner, and social context in which that individual is learning work together to facilitate or inhibit one’s learning and problem-solving success. Many of our studies aim to apply this basic social, affective and cognitive neuroscience research to help students bridge gaps in knowledge and overcome academic challenges.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Mangels.png" alt="peopleimg">
@@ -754,16 +581,6 @@ div.tocify {
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/McCloskey.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="laraine-mcdonough">Laraine McDonough</h4>
-<p><a href="http://academic.brooklyn.cuny.edu/userhome/psych/lmcdonou/index.htm">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=581">Campus Website</a> | contact: <a href="mailto:LaraineM@brooklyn.cuny.edu" class="email">LaraineM@brooklyn.cuny.edu</a></p>
-<p>Associate Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/McDonough.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -790,7 +607,7 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="peter-moller">Peter Moller</h4>
 <p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/moller">Campus Website</a> | contact: <a href="mailto:pmoller@hunter.cuny.edu" class="email">pmoller@hunter.cuny.edu</a></p>
-<p>College of Staten Island</p>
+<p>Hunter College</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Moller.png" alt="peopleimg">
@@ -798,19 +615,11 @@ div.tocify {
 </div>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
-<h4 id="bertram-ploog">Bertram Ploog</h4>
-<p><a href="https://www.csi.cuny.edu/campus-directory/bertram-o-ploog">Campus Website</a> | contact: <a href="mailto:Bertram.Ploog@csi.cuny.edu" class="email">Bertram.Ploog@csi.cuny.edu</a></p>
-<p>Hunter College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Ploog.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
 <h4 id="joshua-plotnik">Joshua Plotnik</h4>
 <p><a href="https://ccconservation.org">Lab Website</a> | <a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/plotnik">Campus Website</a> | contact: <a href="mailto:joshua.plotnik@hunter.cuny.edu" class="email">joshua.plotnik@hunter.cuny.edu</a></p>
 <p>Assistant Professor | Hunter College</p>
+<p>comparative cognition, animal behavior in conservation, convergent cognitive evolution, human-wildlife conflict mitigation</p>
+<p>Dr. Plotnik studies the evolution of cognition across species, with a particular interest in how similarities in physical and social intelligence evolve in evolutionarily distant taxa. Dr. Plotnik works with a number of species, with a particular interest in the Asian elephant. His work aims to identify the sensory modalities most relevant to an animal’s physical and social decision-making processes, and to use this information to develop cognitive tasks that allow for relevant comparisons within and across species. In addition, Dr. Plotnik has a strong interest in the applications of behavior and cognition research to conservation in practice, and works in Asia to use the study of elephant behavior as a tool for mitigating human/elephant conflict.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Plotnik.png" alt="peopleimg">
@@ -820,7 +629,9 @@ div.tocify {
 <div class="col-sm-9">
 <h4 id="sandeep-prasada">Sandeep Prasada</h4>
 <p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/cognitive-psychology/prasada">Campus Website</a> | contact: <a href="mailto:sandeep.prasada@hunter.cuny.edu" class="email">sandeep.prasada@hunter.cuny.edu</a></p>
-<p>Hunter College</p>
+<p>Full Professor | Hunter College</p>
+<p>conceptual representations, lexical representations, generic knowledge, formal structure of concepts</p>
+<p>My research investigates the basic mechanisms of lexical and conceptual representation and development. The research addresses questions such as the following. How do we effortlessly form concepts of a wide variety of things (e.g. dogs, trees, tables, wood, people, mothers, fathers, good, bad, freedom, justice). Are different kinds of mechanisms needed to form concepts of different types? How are conceptual representations related to perceptual and linguistic representations? Do the mechanisms of conceptual representation change with development? How are concepts represented in the brain? We use a variety of techniques to study these questions.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Prasada.png" alt="peopleimg">
@@ -872,7 +683,7 @@ div.tocify {
 <p><a href="https://www.rickermemorylab.com/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/timothy-ricker">Campus Website</a> | contact: <a href="mailto:Timothy.Ricker@csi.cuny.edu" class="email">Timothy.Ricker@csi.cuny.edu</a></p>
 <p>Assistant Professor | College of Staten Island</p>
 <p>Working Memory, Multi-Tasking, Attention, Consolidation</p>
-<p>The Memory &amp; Attention Lab at CUNY investigates how information within the working memory system is maintained and forgotten. We use behavioral experimentation, mathematical process modeling, and Bayesian estimation in support of this goal. More specific areas of investigation include the effects of time, multi-tasking, and complexity on short-term retention.</p>
+<p>My primary research explores how visual working memories are created and forgotten. I also investigate the relationship between working memory and long-term memory, attention, and multi-tasking. I use behavioral experimentation, mathematical process modeling, and Bayesian estimation in support of these goals. I am always interested in collaborations, especially those involving perception, development, and emotion.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Ricker.png" alt="peopleimg">
@@ -890,43 +701,12 @@ div.tocify {
 </div>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
-<h4 id="irina-sekerina">Irina Sekerina</h4>
-<p><a href="http://csivc.csi.cuny.edu/Irina.Sekerina/files/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/irina-sekerina">Campus Website</a> | contact: <a href="mailto:Irina.Sekerina@csi.cuny.edu" class="email">Irina.Sekerina@csi.cuny.edu</a></p>
-<p>College of Staten Island</p>
-<p>bilingualism, Russian, heritage languages, eye-tracking, language acquisition, psycholinguistics</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Sekerina.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
 <h4 id="peter-serrano">Peter Serrano</h4>
 <p><a href="http://www.hunter.cuny.edu/psychology/people/faculty/biopsychology/serrano">Campus Website</a> | contact: <a href="mailto:pserran@hunter.cuny.edu" class="email">pserran@hunter.cuny.edu</a></p>
 <p>Hunter College</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Serrano.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="jacob-shane">Jacob Shane</h4>
-<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1244">Campus Website</a> | contact: <a href="mailto:JShane@brooklyn.cuny.edu" class="email">JShane@brooklyn.cuny.edu</a></p>
-<p>Assistant Professor | Brooklyn College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Shane.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
-<h4 id="justin-storbeck">Justin Storbeck</h4>
-<p><a href="http://qcpages.qc.cuny.edu/~jstorbeck/index.htm">Lab Website</a> | <a href="http://psychology.qc.cuny.edu/full-time-faculty/justin-storbeck/">Campus Website</a> | contact: <a href="mailto:justin.storbeck@qc.cuny.edu" class="email">justin.storbeck@qc.cuny.edu</a></p>
-<p>Queen’s College</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Storbeck.png" alt="peopleimg">
 </div>
 </div>
 <div class="row" style="padding-top: 30px;">
@@ -963,119 +743,403 @@ div.tocify {
 </div>
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-9">
-<h4 id="jennifer-wagner">Jennifer Wagner</h4>
-<p><a href="http://www.csibabylab.com">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/jennifer-wagner">Campus Website</a> | contact: <a href="mailto:jennifer.wagner@csi.cuny.edu" class="email">jennifer.wagner@csi.cuny.edu</a></p>
-<p>Assistant Professor | College of Staten Island</p>
-</div>
-<div class="col-sm-3">
-<img src="images/facultypng/Wagner.png" alt="peopleimg">
-</div>
-</div>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-9">
 <h4 id="steven-young">Steven Young</h4>
 <p><a href="https://sites.google.com/site/stevengrahamyoung/">Lab Website</a> | <a href="http://www.baruch.cuny.edu/wsas/academics/psychology/StevenYoung.htm">Campus Website</a> | contact: <a href="mailto:Steven.Young@baruch.cuny.edu" class="email">Steven.Young@baruch.cuny.edu</a></p>
-<p>Baruch College</p>
+<p>Associate Professor | Baruch College</p>
+<p>Face processing, motivated cognition</p>
+<p>My research focuses on how face memory and the decoding of emotional expressions are shaped by contextual and situational factors. For example, my research on face recognition investigates how intergroup distinctions, perceiver motives, and the social context in which a face is encountered compel perceivers to carefully attend to and remember certain individuals (e.g., ingroup members) or disregard and poorly encode others (e.g., outgroup members). In a related line of research, I study how social contexts and motives influence how accurately perceivers’ decode emotional expressions.</p>
 </div>
 <div class="col-sm-3">
 <img src="images/facultypng/Young.png" alt="peopleimg">
 </div>
 </div>
 </div>
+<div id="affiliate-faculty" class="section level2">
+<h2>Affiliate Faculty</h2>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="jennifer-basil">Jennifer Basil</h4>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=92">Campus Website</a> | contact: <a href="mailto:jbasil@brooklyn.cuny.edu" class="email">jbasil@brooklyn.cuny.edu</a></p>
+<p>Full Professor | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Basil.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="elisabeth-brauner">Elisabeth Brauner</h4>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=431">Campus Website</a> | contact: <a href="mailto:EBrauner@brooklyn.cuny.edu" class="email">EBrauner@brooklyn.cuny.edu</a></p>
+<p>Full Professor | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Brauner.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="benzion-chanowitz">Benzion Chanowitz</h4>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=242">Campus Website</a> | contact: <a href="mailto:BenzionC@brooklyn.cuny.edu" class="email">BenzionC@brooklyn.cuny.edu</a></p>
+<p>Associate Professor | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Chanowitz.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="jennifer-drake">Jennifer Drake</h4>
+<p><a href="http://www.jenniferedrake.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1149">Campus Website</a> | contact: <a href="mailto:JDrake@brooklyn.cuny.edu" class="email">JDrake@brooklyn.cuny.edu</a></p>
+<p>Assistant Professor | Brooklyn College</p>
+<p>drawing, giftedness, emotion regulation, visual arts, aesthetics</p>
+<p>My research program focuses on the psychology of the arts. In one line of research, I examine the emotion regulation strategies in children and adults, examining the relative advantages of expression vs. distraction. In a second line of research, I study the cognitive and perceptual processes underlying graphic representation skills in autistic, non-autistic, and gifted children in order to understand the development of superior perceptual abilities in relation to basic cognition. I also study children’s and adult’s response to and understanding of works of art.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Drake.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="yu-gao">Yu Gao</h4>
+<p><a href="https://gaopsychophysiology.wordpress.com">Lab Website</a> | <a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1034">Campus Website</a> | contact: <a href="mailto:yugao@brooklyn.cuny.edu" class="email">yugao@brooklyn.cuny.edu</a></p>
+<p>Associate Professor | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Gao.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="louise-hainline">Louise Hainline</h4>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=41">Campus Website</a> | contact: <a href="mailto:LouiseH@brooklyn.cuny.edu" class="email">LouiseH@brooklyn.cuny.edu</a></p>
+<p>Full Professor | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Hainline.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="curtis-hardin">Curtis Hardin</h4>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/schools/naturalsciences/undergraduate/psychology/faculty_details.php?faculty=543">Campus Website</a> | contact: <a href="mailto:cdhardin@brooklyn.cuny.edu" class="email">cdhardin@brooklyn.cuny.edu</a></p>
+<p>Full Professor | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Hardin.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="lana-karasik">Lana Karasik</h4>
+<p><a href="https://www.csi.cuny.edu/campus-directory/lana-karasik">Campus Website</a> | contact: <a href="mailto:lana.karasik@csi.cuny.edu" class="email">lana.karasik@csi.cuny.edu</a></p>
+<p>Assistant Professor | College of Staten Island</p>
+<p>infant development, cross-cultural influences, perception-action, social-cognition</p>
+<p>As a developmental psychologist, I am interested in how culture and childrearing practices shape learning opportunities thereby affecting developmental outcomes. We conduct studies in the lab and in the field; in the U.S. and abroad to capture the range of infant experiences and understand individual differences. Through naturalistic and experimental investigations, we examine how infants’ emerging motor skills offer new ways to explore and navigate their environment, engage with people, and use social information to make decisions about action. Reciprocally, we examine how caregivers modify their expectations and behaviors as a result of their infants’ changing skills.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Karasik.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="bertram-ploog">Bertram Ploog</h4>
+<p><a href="https://www.csi.cuny.edu/campus-directory/bertram-o-ploog">Campus Website</a> | contact: <a href="mailto:Bertram.Ploog@csi.cuny.edu" class="email">Bertram.Ploog@csi.cuny.edu</a></p>
+<p>Full Professor | Hunter College</p>
+<p>Attention, autism, behavior analysis, dogs, pigeons, children</p>
+<p>Dr. Bertram O. Ploog runs the Behavior Research Lab. Dr. Ploog is a NYS Licensed Psychologist, NYS Licensed Behavior Analyst, and Board-Certified Behavior Analyst. His current research focuses on behavioral animal models (currently with dogs) to study atypical attention patterns that are critical for a better understanding of children with autism and for the development of effective, evidence-based interventions. He is also directly studying attention processes in these children as they relate to emotion recognition and language — common deficits in children with autism. He uses computer games (in collaboration with Dr. Sturm, CSI Computer Science) because computer games are generally enjoyable and motivating for the participants, and they allow for the precise, objective, and automated assessment of behavior including attention. An entirely new and separate line of research in collaboration with Dr. Durán-Narucki (CSI Psychology) and S. I. Borough Hall focuses on community-level behavior-analytical approaches to address environmental issues, such as littering behavior. Dr. Ploog is also supervising internships at sites that support people with autism. All interested and motivated under/graduate students are welcomed to apply to join the research team.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Ploog.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="irina-sekerina">Irina Sekerina</h4>
+<p><a href="http://csivc.csi.cuny.edu/Irina.Sekerina/files/">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/irina-sekerina">Campus Website</a> | contact: <a href="mailto:Irina.Sekerina@csi.cuny.edu" class="email">Irina.Sekerina@csi.cuny.edu</a></p>
+<p>Full Professor | College of Staten Island</p>
+<p>eye-tracking, bilingualism, heritage languages, Russian, language acquisition</p>
+<p>Eye-Tracking (Visual World Paradigm); bilingualism and heritage languages; Slavic linguistics: Russian and Bulgarian; language acquisition; sentence processing</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Sekerina.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="jacob-shane">Jacob Shane</h4>
+<p><a href="http://www.brooklyn.cuny.edu/web/academics/faculty/faculty_profile.jsp?faculty=1244">Campus Website</a> | contact: <a href="mailto:JShane@brooklyn.cuny.edu" class="email">JShane@brooklyn.cuny.edu</a></p>
+<p>Assistant Professor | Brooklyn College</p>
+<p>Motivation, Lifespan Development, Perceived Control</p>
+<p>My research examines how motivation and opportunity direct and reflect individuals’ development across the life span. I am particularly interested in the dynamic relationships between individuals’ broader beliefs about society, their beliefs about themselves, and their motivational commitment to central life goals.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Shane.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="justin-storbeck">Justin Storbeck</h4>
+<p><a href="http://qcpages.qc.cuny.edu/~jstorbeck/index.htm">Lab Website</a> | <a href="http://psychology.qc.cuny.edu/full-time-faculty/justin-storbeck/">Campus Website</a> | contact: <a href="mailto:justin.storbeck@qc.cuny.edu" class="email">justin.storbeck@qc.cuny.edu</a></p>
+<p>Associate Professor | Queen’s College</p>
+<p>Emotion, Cognition, Executive Functioning</p>
+<p>The QAN Lab is directed by Justin Storbeck, PhD. Dr. Storbeck is an Associate Professor in the Psychology Department at Queens College, City University of New York (CUNY). He received his PhD at the University of Virginia with Dr. Gerald L. Clore. His research examines emotion and cognition, focusing on when emotion facilitates, and when it impedes, cognition and executive functioning.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Storbeck.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="jennifer-wagner">Jennifer Wagner</h4>
+<p><a href="http://www.csibabylab.com">Lab Website</a> | <a href="https://www.csi.cuny.edu/campus-directory/jennifer-wagner">Campus Website</a> | contact: <a href="mailto:jennifer.wagner@csi.cuny.edu" class="email">jennifer.wagner@csi.cuny.edu</a></p>
+<p>Assistant Professor | College of Staten Island</p>
+<p>infancy, eye-tracking, social cognition, autonomic nervous system, autism</p>
+<p>The Cognitive Development Lab (CDL) at College of Staten Island uses eye-tracking and autonomic measures to study early infant and child development across several areas, including social and emotional processing. The lab examines these questions in both typically-developing children and those at risk for later developmental disorders. For example, the CDL is currently studying visual attention and autonomic responding during emotion processing in infants at low and high risk for autism in hopes of identifying early markers that might predict later developmental difficulties.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/facultypng/Wagner.png" alt="peopleimg">
+</div>
+</div>
+</div>
 <div id="students" class="section level2">
 <h2>Students</h2>
-<table>
-<thead>
-<tr class="header">
-<th align="left">First</th>
-<th align="left">Last</th>
-<th align="left">EntryYear</th>
-<th align="left">Advisor</th>
-<th align="left">Website</th>
-<th align="left">Area</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Nicole</td>
-<td align="left">Amada</td>
-<td align="left">Fall 2017</td>
-<td align="left">Shane</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="even">
-<td align="left">Nicholaus</td>
-<td align="left">Brosowsky</td>
-<td align="left">Fall 2014</td>
-<td align="left">Crump</td>
-<td align="left"><a href="https://nbrosowsky.github.io" class="uri">https://nbrosowsky.github.io</a></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="odd">
-<td align="left">Kelly</td>
-<td align="left">Cotton</td>
-<td align="left">Fall 2018</td>
-<td align="left">Ricker</td>
-<td align="left"><a href="https://sites.google.com/site/kelmcotton/home" class="uri">https://sites.google.com/site/kelmcotton/home</a></td>
-<td align="left">CCP</td>
-</tr>
-<tr class="even">
-<td align="left">Taylan</td>
-<td align="left">Ergun</td>
-<td align="left">Fall 2016</td>
-<td align="left">Abramov</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="odd">
-<td align="left">Emilia</td>
-<td align="left">Ezrina</td>
-<td align="left">Fall 2016</td>
-<td align="left">Valian</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="even">
-<td align="left">Josephine</td>
-<td align="left">O’Malley</td>
-<td align="left">Fall 2018</td>
-<td align="left">Valian</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="odd">
-<td align="left">Katherine</td>
-<td align="left">Papazian</td>
-<td align="left">Fall 2017</td>
-<td align="left">Drake</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="even">
-<td align="left">Olga</td>
-<td align="left">Parshina</td>
-<td align="left">Fall 2015</td>
-<td align="left">Sekerina</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-<tr class="odd">
-<td align="left">Qihui</td>
-<td align="left">Xu</td>
-<td align="left">Fall 2017</td>
-<td align="left">Valian/Chodorow</td>
-<td align="left"></td>
-<td align="left">CLD</td>
-</tr>
-</tbody>
-</table>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="nicole-amada">Nicole Amada</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:namada@ramapo.edu" class="email">namada@ramapo.edu</a></p>
+<p>Doctoral Student | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="chloe-brittenham">Chloe Brittenham</h4>
+<p><a href="chloebrittenham.com">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:cbrittenha@gradcenter.cuny.edu" class="email">cbrittenha@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Brooklyn College</p>
+<p>Color vision, Stereopsis, Vision, Visual Psychophysics, Autism Spectrum Disorder, Phelan-McDermid Syndrome, Visual Evoked Potentials, Electrophysiology</p>
+<p>Chloe Brittenham is a Ph.D. student in the Cognition, Language and Development program at the CUNY Graduate Center. She is interested in visual perception in both typical and atypical populations. She is currently studying stereoacuity in typical observers at the Applied Vision Institute at Brooklyn College. She also examines visual abnormalities in electrophysiological responses, Visual Evoked Potentials (VEPs), in children with Autism Spectrum</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="nicholaus-brosowsky">Nicholaus Brosowsky</h4>
+<p><a href="https://nbrosowsky.github.io">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:nbrosowsky@gradcenter.cuny.edu" class="email">nbrosowsky@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="kelly-cotton">Kelly Cotton</h4>
+<p><a href="kellycotton.github.io">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:kcotton@gradcenter.cuny.edu" class="email">kcotton@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | College of Staten Island</p>
+<p>memory, neuroimaging, eye-tracking</p>
+<p>Disorder (ASD) in collaboration with the Gordon Vision Lab at Hunter College and the Seaver Autism Center for Research and Treatment.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="taylan-ergun">Taylan Ergun</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:taylansergun@gmail.com" class="email">taylansergun@gmail.com</a></p>
+<p>Doctoral Student | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="emilia-ezrina">Emilia Ezrina</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:eezrina@gradcenter.cuny.edu" class="email">eezrina@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="sarah-jacobson">Sarah Jacobson</h4>
+<p><a href="https://ccconservation.org/">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:sjacobson@gradcenter.cuny.edu" class="email">sjacobson@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>comparative cognition, animal behavior, conservation, Asian elephant, human-elephant conflict</p>
+<p>My Ph.D. research is focused on Asian elephant crop-raiding behavior, and how individual variation in elephant behavior and cognition can help predict human-elephant conflict as well as develop solutions to this problem. I am specifically investigating the differences in social behavior between groups of elephants that remain in a protected area and those that take the risk to forage on human crops. Cognitively, I am investigating variation in flexible problem solving and innovation between individuals in these groups. I am interested in this intersection of behavioral and cognitive research with conservation and how this research can be applied to wildlife management from the species’ perspective.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="hecht-julie">Hecht Julie</h4>
+<p><a href="www.DogSpies.com">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:dogspies@gmail.com" class="email">dogspies@gmail.com</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>animal behavior, animal welfare, cat, dog, pet, play, cat-human relationship</p>
+<p>I investigate companion animal behavior and welfare and human-animal interactions. My PhD research explores the cat-human relationship.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="nicoletta-memos">Nicoletta Memos</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:nmemos@gradcenter.cuny.edu" class="email">nmemos@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>Addiction, Inflammation, Memory Deficits, Methamphetamine, Sex differences</p>
+<p>The Serrano lab investigates the effects of drugs of abuse on learning and memory. Specifically, our lab developed a voluntary oral methamphetamine (MA) administration model that mimics human oral MA abuse in humans. In this model, mice display deficits in working memory and reference learning following chronic MA consumption. Additionally, we investigate the signaling pathways involved in inflammation and neurodegeneration underlying cognitive deficits associated with MA addiction. We also investigate sex differences in addiction and the associated cognitive deficits, with analysis of the underlying molecular mechanisms involved in promoting these differences.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="josephine-omalley">Josephine O’Malley</h4>
+<p><a href="https://jomalley9.wixsite.com/jomalley">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:jomalley@gradcenter.cuny.edu" class="email">jomalley@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>Bilingualism, Executive Function, Creativity, Bilingual Advantage</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="katherine-papazian">Katherine Papazian</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:katiepapazian@gmail.com" class="email">katiepapazian@gmail.com</a></p>
+<p>Doctoral Student | Brooklyn College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="olga-parshina">Olga Parshina</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:parshinaolga23@gmail.com" class="email">parshinaolga23@gmail.com</a></p>
+<p>Doctoral Student | College of Staten Island</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="eric-angel-ramos">Eric Angel Ramos</h4>
+<p><a href="www.ericangelramos.com">Lab Website</a> | <a href="https://hunter.cuny.edu/">Campus Website</a> | contact: <a href="mailto:eric.angel.ramos@gmail.com" class="email">eric.angel.ramos@gmail.com</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>Marine Mammals, Behavior, Conservation, Management, Acoustics, Tursiops, Trichechus</p>
+<p>I study marine mammal behavior and ecology in the wild with the goal of improving measures for their conservation. I’m broadly interested in better understanding what factors drive animal behavior and habitat use in coastal habitats. In my dissertation, I applied small aerial drones to track fine-scale animal movements in Belize and explored the use of drone-based data collection to test questions about their spatial ecology. In 2018, we published a chapter of my dissertation on the behavioral responses of dolphins and manatees to small drones. My work involves leading educational and science-based ecotourism trips, and extensive collaboration with local communities, research organizations, and governments. I serve as Student Member-At-Large (board member of the Society for Marine Mammalogy) working to advocate for students studying marine mammals and as a member of the IUCN SSC Sirenian Specialist Group in Mesoamerica. I also cofounded FINS, an NGO dedicated to marine megafauna research.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="dana-ravid">Dana Ravid</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:dravid@gradcenter.cuny.edu" class="email">dravid@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | College of Staten Island</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="moises-rivera">Moises Rivera</h4>
+<p><a href="https://doi.org/10.1097/WNR.0000000000001187">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:mrivera3@gradcenter.cuny.edu" class="email">mrivera3@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>Neuroethology, Animal Behavior, Embryonic Learning, Avian Cognition</p>
+<p>My research interests focus on neuroethology and comparative psychology. I have previously reviewed (Rivera et al., 2018) and studied (Rivera et al., 2019) the effects of prenatal acoustic exposure on birds. My results are the first to suggest neural evidence of embryonic learning in the zebra finch. I am currently also using various species of estrildid finches to explore acoustic preference and discrimination ability across this avian family, and to understand the role that phylogeny and acoustic features have on these cognitive phenomena. I actively supervise husbandry of the Woolley bird colonies at Columbia University, including the breeding of our African, Australian, and Asian estrildid finches.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="raymond-van-steyn">Raymond Van Steyn</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:vansteynr@live.com" class="email">vansteynr@live.com</a></p>
+<p>Doctoral Student | Hunter College</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="melissa-voisinet">Melissa Voisinet</h4>
+<p><a href="http://www.m2c2.net/">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:melissavoisinet@gmail.com" class="email">melissavoisinet@gmail.com</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>bottlenose dolphins, cognition, communication, animal welfare</p>
+<p>Melissa is currently in the Cognitive and Comparative Psychology training area of the Psychology PhD program at CUNY. Previously, she studied the physiological impacts of stress on northern elephant seal pups and worked in marine mammal rehabilitation. She is currently investigating the cognitive capacities of bottlenose dolphins under Dr. Diana Reiss, and is interested in applying her research to both captive animal welfare and the conservation of wild populations.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="qihui-xu">Qihui Xu</h4>
+<p><a href="https://qihuixu.wixsite.com/qihui">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:qxu@gradcenter.cuny.edu" class="email">qxu@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>Language acquisition, Computational modeling</p>
+<p>I am currently working on two tracks: psycholinguistics and computational modeling. In psycholinguistics, I am particularly interested in first language acquisition and bilingual representation. In computational modeling, I am trying to use computational tools to better understand human language acquisition. In the future, I hope I can explore the relation between human language processing and natural language processing, and build a bridge between human and machine.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="mason-youngblood">Mason Youngblood</h4>
+<p><a href="https://masonyoungblood.com/">Lab Website</a> | <a href="NA">Campus Website</a> | contact: <a href="mailto:masonyoungblood@gmail.com" class="email">masonyoungblood@gmail.com</a></p>
+<p>Doctoral Student | Queen’s College</p>
+<p>cultural evolution, behavioral ecology, social network analysis, bayesian statistics, machine learning</p>
+<p>I study cultural evolution in songbirds and humans using a combination of traditional experimental approaches and computational methods. In particular, I am interested in how cultural and organic evolution interface through sexual selection, and how cultural transmission mechanisms shape population-level diversity.</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="roseanna-zanca">Roseanna Zanca</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:rzanca@gradcenter.cuny.edu" class="email">rzanca@gradcenter.cuny.edu</a></p>
+<p>Doctoral Student | Hunter College</p>
+<p>Neural mechanisms and outcomes of threat memory processing’s during development</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-9">
+<h4 id="dvora-zomberg">Dvora Zomberg</h4>
+<p><a href="NA">Campus Website</a> | contact: <a href="mailto:dzomberg@gmail.com" class="email">dzomberg@gmail.com</a></p>
+<p>Doctoral Student | College of Staten Island</p>
+</div>
+<div class="col-sm-3">
+<img src="images/studentpng/missing.png" alt="peopleimg">
+</div>
+</div>
+</div>
 </div>
 
 
 
-</div>
-</div>
 
 </div>
 
