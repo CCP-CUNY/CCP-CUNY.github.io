@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -248,9 +247,48 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
 
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <style type="text/css">
 
@@ -556,30 +594,17 @@ div.tocify {
 <li>Form advising committee consisting of a chair (your advisor) plus two other faculty. Meet at the end of the first semester, and end of first year.</li>
 <li>Take two semesters of Independent Research (80200); this forms the basis of the 1st doctoral examination</li>
 <li>Take the CCP colloquium series course</li>
-<li>Advisable:
-<ol style="list-style-type: lower-alpha">
-<li>Apply for NSF pre-doctoral fellowship</li>
-<li>Submit abstract for poster presentation at annual GC Psychology Research Day</li>
-<li>Have the majority of work for first doctoral exam finished so you can complete the exam in a timely fashion.</li>
-</ol></li>
+<li>Advisable: a. Apply for NSF pre-doctoral fellowship b. Submit abstract for poster presentation at annual GC Psychology Research Day c. Have the majority of work for first doctoral exam finished so you can complete the exam in a timely fashion.</li>
 </ul>
 <p>Academic Year Two</p>
 <ul>
 <li><strong>Pass the 1st doctoral examination before the completion of 45 credits, typically before the second semester of the second year (paper and oral defense)</strong></li>
-<li>Take Ethics (77100) and Teaching of Psychology (79900)
-<ol style="list-style-type: lower-alpha">
-<li>These are GC requirements, and there may be other course options to satisfy these requirements (discuss with committee)</li>
-</ol></li>
+<li>Take Ethics (77100) and Teaching of Psychology (79900) a. These are GC requirements, and there may be other course options to satisfy these requirements (discuss with committee)</li>
 <li>Take two semesters of Advanced Independent Research</li>
 <li>Take CCP Colloquium series</li>
 <li>Take two CCP electives (consult with committee about other possible options)</li>
 <li>Establish topic for 2nd doctoral exam; create committee; create reading list</li>
-<li>Advisable:
-<ol style="list-style-type: lower-alpha">
-<li>Prepare and submit paper (likely based on first year project) for publication.</li>
-<li>Apply for doctoral student research grant</li>
-<li>Submit abstract for poster presentation at a non-CUNY conference</li>
-</ol></li>
+<li>Advisable: a. Prepare and submit paper (likely based on first year project) for publication. b. Apply for doctoral student research grant c. Submit abstract for poster presentation at a non-CUNY conference</li>
 </ul>
 <p>Academic Year Three</p>
 <ul>
@@ -588,11 +613,7 @@ div.tocify {
 <li>Take Advanced Independent Research each semester</li>
 <li>Take one CCP elective each semester</li>
 <li><strong>Complete second doctoral exam (literature review, grant proposal, oral defense)</strong></li>
-<li>Advisable:
-<ol style="list-style-type: lower-alpha">
-<li>Submit abstract for poster presentation at a non-CUNY conference</li>
-<li>Complete another research project and submit a paper for publication in a peer-reviewed journal</li>
-</ol></li>
+<li>Advisable: a. Submit abstract for poster presentation at a non-CUNY conference b. Complete another research project and submit a paper for publication in a peer-reviewed journal</li>
 </ul>
 <p>Academic Year Four</p>
 <ul>
@@ -624,7 +645,7 @@ div.tocify {
 <h2>CCP learning goals</h2>
 <p>A student in Cognitive and Comparative Psychology (CCP) who has successfully achieved a doctorate in Psychology will show competencies in the domains of understanding, contributing to, and communicating scientific knowledge. In particular, a student will:</p>
 <ol style="list-style-type: decimal">
-<li>Demonstrate broad and specialized knowledge in the student’s chosen area within Cognitive and Comparative Psychology, including the ability to:
+<li><p>Demonstrate broad and specialized knowledge in the student’s chosen area within Cognitive and Comparative Psychology, including the ability to:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Read and critically evaluate the research literature</li>
 <li>Describe current and classic theories and findings within a specific sub-field, and explain how theories accommodate available findings</li>
@@ -632,7 +653,7 @@ div.tocify {
 </ol></li>
 <li><p>Demonstrate appropriate quantitative, observational, and computational skills for data generation (conducting studies) and data analysis.</p></li>
 <li><p>Make an original contribution to the field.</p></li>
-<li>Demonstrate abilities to explain theory and data in written and oral forms, including:
+<li><p>Demonstrate abilities to explain theory and data in written and oral forms, including:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Writing a journal-quality manuscript and submitting it for publication to a peer- reviewed journal</li>
 <li>Delivering a conference presentation</li>
@@ -750,49 +771,6 @@ $(document).ready(function () {
 });
 
 
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
