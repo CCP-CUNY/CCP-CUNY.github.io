@@ -1,4 +1,5 @@
 ---
+title: People
 output:
   html_document:
     css: style.css
@@ -12,10 +13,13 @@ output:
 
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=T, results="asis"}
-library(googlesheets)
+#library(googlesheets)
 #gs_ls()
-web_df <- gs_title("CCP-CUNY")
-ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
+#web_df <- gs_title("CCP-CUNY")
+#ss_df <- gs_read(ss=web_df, ws = 1, skip=0)
+
+library(googlesheets4)
+ss_df <- read_sheet("https://docs.google.com/spreadsheets/d/1N5E17p1hdNTwBSSUkQGeX-Po_iNeGgwwVnck9eawfvg/edit#gid=0", sheet = 1)
 
 library(dplyr)
 ss_df<-arrange(ss_df, Last)
@@ -81,10 +85,12 @@ cat(c("</div>"))
 ## Students
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, eval=T, results="asis"}
-library(googlesheets)
+#library(googlesheets)
 #gs_ls()
-web_df <- gs_title("CCP-CUNY")
-ss_df <- gs_read(ss=web_df, ws = 'StudentInfo', skip=0)
+#web_df <- gs_title("CCP-CUNY")
+#ss_df <- gs_read(ss=web_df, ws = 'StudentInfo', skip=0)
+
+ss_df <- read_sheet("https://docs.google.com/spreadsheets/d/1N5E17p1hdNTwBSSUkQGeX-Po_iNeGgwwVnck9eawfvg/edit#gid=0", sheet = 2)
 
 library(dplyr)
 ss_df<-arrange(ss_df, Last)

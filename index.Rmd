@@ -70,8 +70,8 @@ files <- paste("images/researchpng/",files, sep="")
 #dat <- read_exif(files)
 #height='375px'
 
-slickR(files,width="100%",
-       slickOpts = list(
+slickR(files,width="100%")+
+  settings(
          arrows = F,
          initialSlide = 1,
          slidesToShow = 1,
@@ -81,7 +81,7 @@ slickR(files,width="100%",
          dots = F,
          autoplay = T,
           autoplaySpeed = 6000
-       ))
+       )
 #for(i in 1:length(files)){
 #  cat("![](",files[i],")", sep="")
 #}
