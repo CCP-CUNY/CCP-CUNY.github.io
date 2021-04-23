@@ -113,11 +113,24 @@ cat(c("\n"))
 #}
 
 
-if(is.na(ss_df$LabWebsite[i])==FALSE){
-cat(c("[Lab Website](", ss_df$LabWebsite[i],") | [Campus Website](", ss_df$CollegeWebsite[i],")","| contact:",ss_df$Email[i]))
-}else{
-cat(c("[Campus Website](", ss_df$CollegeWebsite[i],") | contact: ",ss_df$Email[i]))
+# if(is.na(ss_df$LabWebsite[i])==FALSE){
+# cat(c("[Lab Website](", ss_df$LabWebsite[i],") | [Campus Website](", ss_df$CollegeWebsite[i],")","| contact:",ss_df$Email[i]))
+# }else{
+# cat(c("[Campus Website](", ss_df$CollegeWebsite[i],") | contact: ",ss_df$Email[i]))
+# }
+
+if(is.na(ss_df$StudentWebsite[i])==FALSE) {
+  cat(c("[Website](", ss_df$StudentWebsite[i],") | "))
 }
+
+if(is.na(ss_df$LabWebsite[i])==FALSE) {
+  cat(c("[Lab Website](", ss_df$LabWebsite[i],") | "))
+}
+
+if(is.na(ss_df$Email[i])==FALSE) {
+  cat(c("contact: ", ss_df$Email[i]))
+}
+
 cat(c("\n"))
 cat(c("\n"))
 if(is.na(ss_df$Rank[i])==FALSE){
@@ -142,7 +155,7 @@ cat(c(ss_df$Statement[i]))
 cat(c("\n"))
 cat(c("</div>"))
 cat(c("<div class=\"col-sm-3\">"))
-cat(c("<img src=\"images/studentpng/missing.png\" alt=\"peopleimg\">"),sep="")
+cat(c("<img src=\"images/student/",ss_df$Image[i],"\" alt=\"peopleimg\">"),sep="")
 cat(c("</div>"))
 cat(c("</div>"))
 }
